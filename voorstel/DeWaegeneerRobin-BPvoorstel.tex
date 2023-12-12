@@ -1,0 +1,147 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachproef
+%==============================================================================
+% Gebaseerd op document class `hogent-article'
+% zie <https://github.com/HoGentTIN/latex-hogent-article>
+
+% Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
+% Let op: kan enkel na toestemming van de bachelorproefcoördinator!
+\documentclass{hogent-article}
+
+% Invoegen bibliografiebestand
+\addbibresource{voorstel.bib}
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelorproef}
+\assignmenttype{Onderzoeksvoorstel}
+% Voor een voorstel in het Engels, haal de volgende 3 regels uit commentaar
+% \studyprogramme{Bachelor of applied information technology}
+% \course{Bachelor thesis}
+% \assignmenttype{Research proposal}
+
+\academicyear{2023-2024} 
+
+% TODO: Werktitel
+\title{Augmented Reality ondersteunde mobiliteitstool voor mensen met een mentale beperking}
+
+% TODO: Studentnaam en emailadres invullen
+\author{Robin De Waegeneer}
+\email{robin.dewaegeneer@student.hogent.be}
+
+% TODO: Geef de co-promotor op
+\supervisor[Co-promotor]{T. Aelbrecht (HoGent, \href{mailto:thomas.aelbrecht@hogent.be}{thomas.aelbrecht@hogent.be})}
+
+% Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
+% Kies uit deze lijst:
+%
+% - Mobile \& Enterprise development
+% - AI \& Data Engineering
+% - Functional \& Business Analysis
+% - System \& Network Administrator
+% - Mainframe Expert
+% - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
+%   zelf
+%
+\specialisation{AI \& Data Engineering}
+\keywords{Mobiliteitstool, mentale beperking, AR}
+
+\begin{document}
+
+  \begin{abstract}
+    Dit onderzoek richt zich op de integratie van AR voor de optimalisatie van interactieve mobiliteitstools voor mensen met een mentale beperking. Mobiliteit is een belangrijk aspect van het dagelijkse leven en vormt een specifieke uitdaging voor mensen met een verstandelijke beperking. Startpunt van het onderzoek zijn reeds bestaande tools die aan de hand van augmented reality tot een volledig POC zullen uitgewerkt worden. Dankzij een bevraging van de stakeholders wil het onderzoek bijkomende inzichten creëren zowel omtrent de doelgroep als de concrete oplossingen. Binnen de uitwerking van de POC is gepland om een groep kinderen met de ontworpen app te laten experimenteren om na te gaan hoe ze zich beter kunnen verplaatsen met de AR ondersteunde applicaties.
+  \end{abstract}
+
+\tableofcontents
+
+\bigskip
+
+\section{Inleiding}%
+    \label{sec:inleiding}
+    
+    % TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
+    
+    Het globale objectief van ons onderzoek is een tool te ontwikkelen die mensen met een matige mentale beperking helpt om op een efficiënte en veilige manier gebruik te maken van het openbaar vervoer. Onze POC wordt zo simpel mogelijk ontwikkeld, zodat ze gestructureerd hun weg kunnen vinden. Door bestaande tools te screenen, al dan niet gericht op onze doelgroep, en deze af te toetsen door bevraging van verschillende stakeholders, kunnen we zelf een meer optimale tool in kaart brengen. Kort gezegd: hoe geraakt iemand die niet kan (klok)lezen zonder enige begeleiding van punt A naar punt B met visuele en/of auditieve signalen binnen het juiste tijdsbestek.
+    We zijn ervan overtuigd dat deze mobiliteitstool een grote impact en meerwaarde zal hebben voor deze doelgroep door hun limieten te verleggen en zelfstandigheid te vergroten.
+    
+    \section{Literatuurstudie}%
+    \label{sec:literatuurstudie}
+    
+    % TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+    
+    % Refereren naar de literatuur kan met:
+    % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
+    % \textcite{BIBTEXKEY} -> Auteur (jaartal)
+    Deze literatuurstudie geeft een overzicht van wat we weten over mobiliteitstools, slimme technologieën en toegankelijkheden. Tools die in België beschikbaar zijn: de NMBS app, MIVB app, De Lijn app en TEC app. Deze tools zijn ontwikkeld door de belgische overheidsdiensten. Deze apps werken met een simpele input en output. De gebruiker geeft een begin- en eindplaats in. De app berekent nadien de beste mogelijke routes op het tijdstip dat gewenst is \autocite{BelgischeSpoorwegen2023,Lijn2023,encommun2023, ,IntercommunaalVervoerteBrussel2023}. Nu het probleem met dit soort applicaties is dat mensen met een matige mentale beperking hierbij hun begin- en eindpunt moeten onthouden. Dit creëert meteen al een barrière want ze weten ook niet meteen waar deze plaats zich bevindt, waar ze moeten opstappen. Een andere applicatie die dit struikelblok heeft is google maps. Dit systeem werkt soort gelijk, geef je vertrek- en aankomstplaats in en de app retourneert de beste mogelijke routes op dat bepaald tijdstip dat meegegeven is \autocite{Google2023}. Dott en Villo zijn andere systemen waarmee ze hun kunnen verplaatsen. Deze systemen bieden fietsen of steps aan die verspreid staan over een bepaalde regio in een stad. Deze voertuigen kunnen hun verplaatsen van punt A naar punt B op een efficiënte manier \autocite{Villo2023,HenriMoissinac2023}. Google ontwikkelde in 2014 een smart device genaamd google glasses. Deze glasses waren ontwikkeld om AR een duw in de wereld te geven. Het product kreeg een tweede versie in 2017 als ondernemingseditie. De bril had geen succes en dit jaar in maart 2023 kondigde Google aan dat ze het project stop zetten \autocite{Gvora2023}. Ondanks dat de doelgroep niet instaat is te lezen of schrijven zijn ze wel nog instaat te spreken met behulp van AI kan stem herkenning hulp bieden. Zo kunnen ze met die tool inspreken waar ze naartoe willen. De AI berekent dan de beste routes en de beste manier om daar gemakkelijk te geraken\autocite{Soni2023a}. Het gebruik van ontologiën maakt het mogelijk om voor ze een goede structuur te leggen waardoor ze ergens gemakkelijk aankomen \autocite{Ruta2010}. Een andere mogelijkheid is mobiliteitspatronen gebruiken. Deze patronen kunnen potentiële knelpunten identificeren, hulp bieden bij bij het optimaliseren van routes als er verkeerswerken zijn. De noodzaak van dit systeem zijn realtime gegevens waarbij samenwerking met belanghebbende belangrijk is \autocite{Ciravegna2018}. Het opzetten van een meta model kan begeleiders van mensen met een matige mentale beperking helpen met het navigeren naar een juiste plaats. Door gegevensverzameling kan er aan de hand van algoritmes voorspellingen gemaakt worden wat voor deze persoon de favoriete manier van verplaatsen is of favoriete route is om te volgen naar het werk \autocite{Stepanov2003}. Als laatste kan er gebruik gemaakt worden van IoT(Internet of Things) Tools voor het slim communiceren tussen verschillende apparatuur wat kan leiden tot nog betere prestaties in verplaatsing en routeberekening \autocite{Fatnassi2015}.
+    
+    \section{Methodologie}%
+    \label{sec:methodologie}
+    
+    % TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+    
+    \textbf{Bevraging van de noden} \\
+    Na de nodige research online en in bestaande applicaties van huidige aanbieders, plannen we bevragingen in van de stakeholders. Aan de hand van interviews met personen, begeleidingsorganisaties en vakexperten die zich bezighouden met mensen met een matige mentale beperking kunnen we inzichten verwerven over meer specifieke noden. Waartoe zijn mensen met dergelijke beperking wel en niet in staat. Op basis van deze gesprekken stellen we een explicietere lijst op met basisvoorwaarden. Hierdoor kunnen we tijdens de interviews met hard- en softwareontwikkelaars meer gerichte vragen stellen. \\
+    Om af te toetsen met wie en hoe we een degelijke samenwerking op poten kunnen zetten, bevragen we in zijn geheel 4 sectoren, betrokken in ons concept:
+    \begin{enumerate}
+        \item De overheid aan de hand van het VAPH (Vlaams Agentschap voor Personen met een Handicap)
+        \item Hardwarebedrijven voor de implementatie
+        \item Het openbaar vervoer (enkel op Vlaams niveau: De Lijn en NMBS) voor de integratie
+        \item Gespecialiseerde organisaties in het begeleiden van mensen met een verstandelijke beperking voor de noden en objectieven.
+    \end{enumerate}
+    Aan de hand van de conclusies van alle bovenstaande gesprekken zal een duidelijk beeld ontstaan van over haalbaarheid omtrent hardware, integratie binnen het openbaar vervoer en belangrijke behoeftes van de mensen zelf.
+    De deliverable van deze fase is een opsomming van concrete functionaliteiten nodig in de tool. \\\\
+    
+    \textbf{Onderzoek Software en POC} \\
+    Op basis van de bevragingen uit bovenstaande fase start de ontwikkeling van de softwaremogelijkheden. Met hogervermelde uitkomsten zal een gedetailleerde beschrijving opgemaakt worden. Hierin zullen 3 grote rubrieken aan bod komen:
+    \begin{enumerate}
+        \item \textbf{Functies}: Een lijst van alle nodige functies in de app (location tracking, text-to-speech / voorleesfunctie, ...)
+        \item \textbf{Integraties}: Een omschrijving van mogelijke integraties (Google Maps, game, ...)
+        \item \textbf{Manier}: Een selectie van enkele mogelijke manieren waarmee interactie kan geïnitieerd worden (kleuren, geluiden, patronen, figuren, ...)
+    \end{enumerate}
+    Uiteindelijk zal er een compilatie gemaakt worden van de beste opties en combinaties om verder uit te werken in een Proof Of Concept (design van de app). \\\\
+    
+    \textbf{Hardwarecomponenten} \\
+    Hierbij wordt afgetoetst welke mogelijkheden voor handen zijn om onze software in werking te laten treden. Om te achterhalen wat de beste optie(s) zijn, zullen we met nieuwe inzichten, verworven in de ontwikkeling van het softwaregedeelte, op zoek gaan naar lokale hardwarebedrijven die ons concept kunnen implementeren. Dankzij deze interactie verwachten we een goede aanbeveling te kunnen geven omtrent implementatie met enkel een smartwatch, enkel een gsm, een combinatie van beide of misschien nog iets anders. \\
+    Steunend op deze gesprekken zal een overzicht opgesteld worden met de benodigde hardwarecomponenten en eventuele informatie omtrent de samenwerking. \\\\
+    
+    \textbf{Latere innovaties} \\
+    Uit \emph{Bevraging van de noden, Onderzoek Software en POC} en \emph{Hardwarecomponenten} zullen allicht nog verschillende mogelijkheden, die later kunnen toegevoegd worden, tot uiting komen. Deze innovaties zullen variëren in functie van verdere samenwerkingen met bedrijven tot nieuwe functies die dienen als aanvulling op bestaande functionaliteiten en extra mogelijke integraties. Deze fase zal samengevat worden in een opsomming met potentieel bijkomende add-on's.
+    
+    \section{Verwachte resultaten}%
+    \label{sec:verwachte-resultaten}
+    
+    % TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
+    
+    % Op het einde van het traject zal een volledig uitgewerkte Proof Of Concept tot stand zijn gekomen. Deze zal onder meer mogelijk gemaakt worden door verworven inzichten uit gesprekken met vernoemde bedrijven in verschillende sectoren. Daarnaast is het ook mogelijk dat een samenwerking met één of meerdere bedrijven tot stand wordt gebracht.
+    We verwachten uit de screening van bestaande tools nuttige functies te kunnen gebruiken als inspiratie voor onze POC. Dankzij de inzichten verworven in de bevraging van de noden en gesprekken met soft- en hardwareontwikkelaars zal onze POC zo functioneel mogelijk zijn voor de specifieke doelgroep. Tot slot gaan we er vanuit dat een samenwerking met minstens 1 bedrijf een concrete aanzet kan zijn tot effectieve uitwerking van de POC.
+    
+    
+    \section{Discussie, conclusie}%
+    \label{sec:discussie-conclusie}
+    In essentie kan worden gesteld dat er al enkele bruikbare tools ontwikkeld zijn, maar deze niet (volledig) aan de noden voldoen voor mensen met een matige mentale beperking. Deze hulpmiddelen vereisen nog steeds een redelijke kennis in het gebruik. Daarom wordt, na bevragingen, een POC opgesteld aan de hand van verworven inzichten. De bekomen resultaten van de literatuurstudie, in combinatie met de bevragingen en gebouwde POC, zullen een duidelijk beeld schetsen voor de samenwerking met een hardwarebedrijf. Als resultaat hierop wordt meteen ook nagedacht over extra functies en integraties die dan samengevat worden als opsomming met latere innovaties.
+
+    \section{Verloop}%
+    \label{sec:verloop}
+    In de flowchart wordt een beeld geschetst van de logische stappen waaruit het onderzoek bestaat. De tijdslijn van de opeenvolgende fasen is uitgezet in een Gantt-chart. De bevraging van de stakeholders wordt opgestart zodra een eerste beeld is gevormd via screening van bestaande tools. De software uitwerking van de POC start zodra al deze resultaten verwerkt zijn tot een duidelijke omschrijving van de noden en functionaliteiten. Met de eerste POC resultaten kunnen in parallel ook hardwarecomponenten gezocht worden. Bij het afronden van deze concrete uitwerkingsfasen wordt verder aangevuld met mogelijke latere innovaties. De resultaten omvatten duidelijke keuzes voor de finale POC en in de conclusies worden deze opnieuw getoetst aan de initiële doelstellingen en verwachtingen. Het neerschrijven van alle bevindingen in de scriptie loopt gedurende het volledige traject van het onderzoek. \\\\
+    
+    \textbf{Flowchart} \\\\
+    \includegraphics[width=\columnwidth,height=11cm]{flow}
+    
+    \vspace{5mm}
+    
+    \textbf{Gantt-chart} \\\\
+    \includegraphics[width=\columnwidth]{gantt}
+    
+    %------------------------------------------------------------------------------
+    % Referentielijst
+    %------------------------------------------------------------------------------
+    % TODO: (fase 4) de gerefereerde werken moeten in BibTeX-bestand
+    % bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
+    % houden.
+    % De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
+    % kan opgenomen worden in de bijlagen van de bachelorproef zelf.
+    \input{voorstel-inhoud}
+
+    \printbibliography[heading=bibintoc]
+
+\end{document}

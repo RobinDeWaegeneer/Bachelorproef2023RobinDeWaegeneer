@@ -3,6 +3,6 @@ Meerdere zoeken
 breeder in ~~matige~~
 
 
-POC:
+Proof-of-Concept:
 
 Kinderen laten rondlopen met die gsm.
