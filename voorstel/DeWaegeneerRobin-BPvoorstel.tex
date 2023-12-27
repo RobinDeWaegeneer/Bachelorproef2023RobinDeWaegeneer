@@ -8,11 +8,14 @@
 % Let op: kan enkel na toestemming van de bachelorproefcoördinator!
 \documentclass{hogent-article}
 
+\usepackage{graphicx}
+\graphicspath{{./img/}}
+
 % Invoegen bibliografiebestand
 \usepackage[backend=biber,style=apa]{biblatex}
 \DeclareLanguageMapping{dutch}{dutch-apa}
 \addbibresource{references.bib}
-
+\usepackage{hyperref}
 % Informatie over de opleiding, het vak en soort opdracht
 \studyprogramme{Professionele bachelor toegepaste informatica}
 \course{Bachelorproef}
@@ -25,7 +28,7 @@
 \academicyear{2023-2024} 
 
 % TODO: Werktitel
-\title{Augmented Reality ondersteunde mobiliteitstool voor mensen met een mentale beperking}
+\title{Vergelijkende studie van Augmented Reality ondersteunde mobiliteitstool voor personen met een mentale beperking: een proof of concept benadering.}
 
 % TODO: Studentnaam en emailadres invullen
 \author{Robin De Waegeneer}
@@ -51,7 +54,7 @@
 \begin{document}
 
   \begin{abstract}
-    Dit onderzoek richt zich op de integratie van AR voor de optimalisatie van interactieve mobiliteitstools voor mensen met een mentale beperking. Mobiliteit is een belangrijk aspect van het dagelijkse leven en vormt een specifieke uitdaging voor mensen met een verstandelijke beperking. Startpunt van het onderzoek zijn reeds bestaande tools die aan de hand van augmented reality tot een volledig POC zullen uitgewerkt worden. Dankzij een bevraging van de stakeholders wil het onderzoek bijkomende inzichten creëren zowel omtrent de doelgroep als de concrete oplossingen. Binnen de uitwerking van de POC is gepland om een groep kinderen met de ontworpen app te laten experimenteren om na te gaan hoe ze zich beter kunnen verplaatsen met de AR ondersteunde applicaties.
+    Dit onderzoek richt zich op de integratie van AR voor de optimalisatie van interactieve mobiliteitstools voor mensen met een mentale beperking. Mobiliteit is een belangrijk aspect van het dagelijkse leven en vormt een specifieke uitdaging voor mensen met een verstandelijke beperking. Startpunt van het onderzoek zijn reeds bestaande tools die aan de hand van augmented reality (AR) tot een volledig POC zullen uitgewerkt worden. Dankzij een bevraging van de stakeholders wil het onderzoek bijkomende inzichten creëren zowel omtrent de doelgroep als de concrete oplossingen. Binnen de uitwerking van de POC is gepland om een groep kinderen met de ontworpen app te laten experimenteren om na te gaan hoe ze zich beter kunnen verplaatsen met de AR ondersteunde applicaties. Uit de vergelijkende studie wordt verwacht dat specifieke AR functionaliteiten zullen worden geïdentificeerd voor de doelgroep. Bovendien zal dankzij een testfase van de POC het effectieve gebruiksgemak worden beoordeeld. Als conclusie zal deze studie een duidelijk lastenboek afleveren voor verdere ontwikkeling van een aangepaste mobiliteitstool voor mensen met een mentale beperking.
   \end{abstract}
 
 \tableofcontents
@@ -61,7 +64,7 @@
 \section{Inleiding}%
     \label{sec:inleiding}
     
-    Het globale objectief van ons onderzoek is een tool te ontwikkelen die mensen met een matige mentale beperking helpt om op een efficiënte en veilige manier gebruik te maken van het openbaar vervoer. Onze POC wordt zo simpel mogelijk ontwikkeld, zodat ze gestructureerd hun weg kunnen vinden. Door bestaande tools te screenen, al dan niet gericht op onze doelgroep, en deze af te toetsen door bevraging van verschillende stakeholders, kunnen we zelf een meer optimale tool in kaart brengen. Kort gezegd: hoe geraakt iemand die niet kan (klok)lezen zonder enige begeleiding van punt A naar punt B met visuele en/of auditieve signalen binnen het juiste tijdsbestek.
+    Mensen met een mentale beperking ondervinden bij het gebruik van bestaande mobiliteitstools problemen, omdat deze uitgaan van een basisniveau lees- en schrijfvaardigheid waarover zij niet beschikken. Bovendien is in sommige gevallen ook hun tijds- en ruimtebesef gelimiteerd. Het globale objectief van het onderzoek is een tool te ontwikkelen om deze mensen via  Augmented Reality (AR) ondersteuning deze op een efficiënte en veilige manier te gebruiken. De POC wordt zo eenvoudig mogelijk ontwikkeld, zodat ze gestructureerd hun weg kunnen vinden met behulp van het openbaar vervoer. Door bestaande tools te screenen, al dan niet gericht op onze doelgroep, en deze af te toetsen door bevraging van verschillende stakeholders, wordt een meer optimale tool in kaart gebracht. Kort gezegd: hoe geraakt iemand die niet kan (klok)lezen zonder enige begeleiding van punt A naar punt B met visuele en/of auditieve signalen aan de hand van AR binnen het juiste tijdsbestek.
     We zijn ervan overtuigd dat deze mobiliteitstool een grote impact en meerwaarde zal hebben voor deze doelgroep door hun limieten te verleggen en zelfstandigheid te vergroten.
     
     \section{Literatuurstudie}%
@@ -70,47 +73,43 @@
     % Refereren naar de literatuur kan met:
     % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
     % \textcite{BIBTEXKEY} -> Auteur (jaartal)
-    De literatuurstudie zal een overzicht maken van de bestaande tools zoals de applicaties van NMBS, De Lijn en standaard routeplanners (applicaties en websites) en op welke principes deze gebaseerd zijn. Daarnaast zullen minstens twee AR methodes vergeleken worden zoals Mapbox AR en Google maps AR, die in aanmerking komen voor integratie in de POC \autocite{BelgischeSpoorwegen2023,Lijn2023,encommun2023, ,IntercommunaalVervoerteBrussel2023}. Nu het probleem met dit soort applicaties is dat mensen met een matige mentale beperking hierbij hun begin- en eindpunt moeten onthouden. Dit creëert meteen al een barrière want ze weten ook niet meteen waar deze plaats zich bevindt, waar ze moeten opstappen. Een andere applicatie die dit struikelblok heeft is google maps. Dit systeem werkt soort gelijk, geef je vertrek- en aankomstplaats in en de app retourneert de beste mogelijke routes op dat bepaald tijdstip dat meegegeven is \autocite{Google2023}. Dott en Villo zijn andere systemen waarmee ze hun kunnen verplaatsen. Deze systemen bieden fietsen of steps aan die verspreid staan over een bepaalde regio in een stad. Deze voertuigen kunnen hun verplaatsen van punt A naar punt B op een efficiënte manier \autocite{Villo2023,HenriMoissinac2023}. Google ontwikkelde in 2014 een smart device genaamd google glasses. Deze glasses waren ontwikkeld om AR een duw in de wereld te geven. Het product kreeg een tweede versie in 2017 als ondernemingseditie. De bril had geen succes en dit jaar in maart 2023 kondigde Google aan dat ze het project stop zetten \autocite{Gvora2023}. Ondanks dat de doelgroep niet instaat is te lezen of schrijven zijn ze wel nog instaat te spreken met behulp van AI kan stem herkenning hulp bieden. Zo kunnen ze met die tool inspreken waar ze naartoe willen. De AI berekent dan de beste routes en de beste manier om daar gemakkelijk te geraken\autocite{Soni2023a}. Het gebruik van ontologiën maakt het mogelijk om voor ze een goede structuur te leggen waardoor ze ergens gemakkelijk aankomen \autocite{Ruta2010}. Een andere mogelijkheid is mobiliteitspatronen gebruiken. Deze patronen kunnen potentiële knelpunten identificeren, hulp bieden bij bij het optimaliseren van routes als er verkeerswerken zijn. De noodzaak van dit systeem zijn realtime gegevens waarbij samenwerking met belanghebbende belangrijk is \autocite{Ciravegna2018}. Het opzetten van een meta model kan begeleiders van mensen met een matige mentale beperking helpen met het navigeren naar een juiste plaats. Door gegevensverzameling kan er aan de hand van algoritmes voorspellingen gemaakt worden wat voor deze persoon de favoriete manier van verplaatsen is of favoriete route is om te volgen naar het werk \autocite{Stepanov2003}. Als laatste kan er gebruik gemaakt worden van IoT(Internet of Things) Tools voor het slim communiceren tussen verschillende apparatuur wat kan leiden tot nog betere prestaties in verplaatsing en routeberekening \autocite{Fatnassi2015}.
+    De literatuurstudie zal een overzicht maken van de bestaande tools zoals de applicaties van NMBS, De Lijn en standaard routeplanners. Deze applicaties en websites zijn gebaseerd op het principe dat de gebruiker zelfstandig een adres en tijdstip zelf kan ingeven en maken niet altijd gebruik van locatiebepaling, wat voor de doelgroep een duidelijke hinderpaal is.
     
-    \section{State-of-the-art}%
-    \label{sec:State-of-the-art}
+    Daarnaast zullen diverse AR methodes binnen de huidige state of the art vergeleken worden voor het verbeteren van de gebruikerservaring. Mapbox AR maakt gebruik van points of interest terwijl Google Maps AR inzet op multidimensionele visualisatie om de gebruiker comfortabel aan te sturen tijdens het navigeren. Met behulp van de camera van het mobiele apparaat worden real-time beelden van de omgeving vastgelegd, waarbij digitale routeaanwijzingen over de werkelijke beelden worden geprojecteerd. Dit zorgt voor een intuïtieve en praktische navigatie-ervaring, vooral in stedelijke gebieden waar traditionele kaarten mogelijk minder effectief zijn. 
     
-    Binnen de huidige state of the art zijn 2 tools bekend, namelijk ontwikkeld door Google Maps en Mapbox AR.
+    Mapbox AR onderscheidt zich door zijn typische karakteristiek van geavanceerde aanpasbaarheid en integratiemogelijkheden. Deze tool biedt ontwikkelaars een krachtig platform waarmee ze op maat gemaakte augmented reality-toepassingen kunnen creëren, variërend van navigatie tot locatiegebaseerde informatie. Hierdoor hebben ontwikkelaars de flexibiliteit om kaartgegevens aan te passen, aangepaste overlays toe te voegen en de gebruikerservaring te optimaliseren voor specifieke doeleinden. Beide tools vertegenwoordigen technologieën binnen het domein van augmented reality en kaartnavigatie. Ze tonen de evolutie aan van traditionele kaartapplicaties naar meer dynamische, op AR gebaseerde oplossingen.  
+     
+    Ook Koombea verhoogt de gebruikerservaring en met AR City komt de locatie effectief tot leven dankzij bijkomende informatie. Sygic werd specifiek ontwikkeld voor auto GPS-systemen om de bestuurderservaring te optimaliseren, maar kan een toegevoegde waarde hebben wanneer de gebruiker tijdens een busrit het traject mee wil opvolgen. Functionaliteiten van elk deze tools zullen gescreend worden om te bepalen of zij in aanmerking komen voor integratie in de POC. 
     
-    \subsection{Google Maps Tool}
-    De eerste tool, ontwikkeld door Google Maps, biedt gebruikers de mogelijkheid om nauwkeurige navigatie-instructies te ontvangen via augmented reality (AR). Met behulp van de camera van het mobiele apparaat worden real-time beelden van de omgeving vastgelegd, waarbij digitale routeaanwijzingen over de werkelijke beelden worden geprojecteerd. Dit zorgt voor een intuïtieve en praktische navigatie-ervaring, vooral in stedelijke gebieden waar traditionele kaarten mogelijk minder effectief zijn.
+    De implementatie van locatiegevoelige informatie in combinatie met de AR visualisatie neemt diverse barrières weg voor de doelgroep. Zij hoeven immers niet het adres te kennen van hun startpunt. Het eindpunt kunnen ze bv. omschrijven via een pictogram zoals deze gebruikt worden in Sclera. Deze pictogrammen worden standaard aangeleerd bij onze doelgroep ter bevordering van hun communicatie en visualisatie van hun dagplanning.
     
-    \subsection{Mapbox AR Tool}
-    De tweede tool, ontwikkeld door Mapbox AR, onderscheidt zich door zijn typische karakteristiek van geavanceerde aanpasbaarheid en integratiemogelijkheden. Mapbox AR biedt ontwikkelaars een krachtig platform waarmee ze op maat gemaakte augmented reality-toepassingen kunnen creëren, variërend van navigatie tot locatiegebaseerde informatie. Deze tool geeft ontwikkelaars de flexibiliteit om kaartgegevens aan te passen, aangepaste overlays toe te voegen en de gebruikerservaring te optimaliseren voor specifieke doeleinden.
+    Naast het openbaar vervoer kunnen andere systemen zoals Dott en Villo worden overwogen omdat dergelijke fietsen en steps verspreid staan in diverse steden. Ze bieden een bijkomende optie voor het verplaatsen van punt A naar punt B op een efficiënte manier.
     
-    Beide tools vertegenwoordigen baanbrekende technologieën binnen het domein van augmented reality en kaartnavigatie, en ze tonen de evolutie aan van traditionele kaartapplicaties naar meer dynamische, op AR gebaseerde oplossingen.
+    Op hardwaregebied ontwikkelde Google in 2014 een smart device genaamd Google Glasses. Deze brillen hadden als doel om AR een extra boost te geven aan de hand van een concreet concept. Het product kreeg een tweede versie in 2017, als ondernemingseditie, maar had geen succes en eerder dit jaar in maart 2023 kondigde Google aan dat ze het project stopzetten \autocite{Gvora2023}.
+   
+    Tot slot geldt dat de doelgroep die niet in staat is te lezen of schrijven, wel gebruik kan maken van text-to-speech functionaliteit om de gewenste locatie te omschrijven. De tool moet met andere woorden ook deze stemherkenning als ondersteuning bieden. Dankzij artificiële intelligentie (AI) wordt dan de beste route berekent en tevens de beste manier om daar gemakkelijk te geraken\autocite{Soni2023a}. Het gebruik van datastructuren zal toelaten deze locatie informatie te linken aan het routepatroon\autocite{Ruta2010}. Bovendien kunnen deze patronen potentiële knelpunten identificeren, hulp bieden bij het optimaliseren van routes als er verkeerswerken of files zijn. De noodzaak van dit systeem zijn realtime gegevens waarbij samenwerking met belanghebbende belangrijk is \autocite{Ciravegna2018}. 
+    
+    Het opzetten van een meta model kan begeleiders van mensen met een matige mentale beperking helpen met het navigeren naar een juiste plaats. Door gegevensverzameling kan er aan de hand van algoritmes voorspellingen gemaakt worden wat voor deze persoon de favoriete manier van verplaatsen is of favoriete route is om te volgen naar het werk \autocite{Stepanov2003}. Als laatste kan er gebruik gemaakt worden van IoT (Internet of Things) tools voor het slim communiceren tussen verschillende apparatuur wat kan leiden tot nog betere prestaties in verplaatsing en routeberekening \autocite{Fatnassi2015}.
     
 
     
     \section{Methodologie}% \\
    
-    De methodologie van het onderzoek bestaat uit een aantal belangrijke deelstappen waaronder bevraging van de noden, definitie van de software inclusief AR opties, mogelijke hardwarecomponenten, uitwerking van de proof of concept en een praktijkexperiment.
+    De methodologie van het onderzoek bestaat uit een aantal belangrijke deelstappen waaronder literatuurstudie, een requirementsanalyse door middel van bevraging van de noden bij de stakeholders, definitie van de software inclusief AR opties, mogelijke hardwarecomponenten voor implementatie, uitwerking van de proof of concept, een praktijkexperiment in meerdere fasen, het formuleren van de conclusies en de scriptie. De hoofdvraag omvat diverse delenaspecten zoals kan locatiebepaling helpen om zelfstandige input van de gebruikers te omzeilen. Anderzijds zal ook het deelaspect van de specifieke communicatiemogelijkheden voor mensen met een beperking worden geëvalueerd. Tot slot brengt de integratie van AR een toegevoegde waarde omtrent veiligheidsgevoel en comfort, wat moet blijken uit de feedback van de praktijktesten.
     
     \textbf{Bevraging van de noden} \\
     
-    Na de nodige research online en in bestaande applicaties van huidige aanbieders, is een bevraging van diverse stakeholders gepland. Aan de hand van interviews met De Lijn, NMBS, begeleidings-organisaties en vakexperten die mensen met een matige mentale beperking begeleiden, worden inzichten verworven over de huidige mogelijkheden en de specifieke noden. Hiervoor zullen een aantal sleutelorganisaties benaderd worden zoals het VAPH (Vlaams Agentschap voor Personen met een Handicap), Tanderuis (gespecialiseerd in autismespectrumstoornis) en Fiola (begeleiding mensen met mentale beperking).
-    
-    \begin{enumerate}
-        \item De overheid aan de hand van het VAPH (Vlaams Agentschap voor Personen met een Handicap)
-        \item Hardwarebedrijven voor de implementatie
-        \item Het openbaar vervoer (enkel op Vlaams niveau: De Lijn en NMBS) voor de integratie
-        \item Gespecialiseerde organisaties in het begeleiden van mensen met een verstandelijke beperking voor de noden en objectieven.
-    \end{enumerate}
+    Na de nodige research online en in bestaande applicaties van huidige aanbieders, is een bevraging van diverse stakeholders gepland. Aan de hand van interviews met De Lijn, NMBS, begeleidingsorganisaties en vakexperten die mensen met een matige mentale beperking begeleiden, worden inzichten verworven over de huidige mogelijkheden en de specifieke noden. Hiervoor zullen een aantal sleutelorganisaties benaderd worden zoals het VAPH (Vlaams Agentschap voor Personen met een Handicap), Tanderuis (gespecialiseerd in autismespectrumstoornis) en Fiola (begeleiding mensen met mentale beperking).
 
     Welke zijn de basisvoorwaarden voor een toegankelijke applicatie en welke aangepaste communicatiemiddelen kunnen praktisch ingezet worden. Deze bevraging zal het lastenboek definiëren voor onze proof of concept en mogelijkheden voor samenwerking verduidelijken. 
     
-    \textbf{Onderzoek Software en POC} \\
+    \textbf{Onderzoek Software} \\
     
     Op basis van de bevragingen uit bovenstaande fase start de ontwikkeling van de softwaremogelijkheden. Met hogervermelde uitkomsten zal een gedetailleerde beschrijving opgemaakt worden. Hierin zullen 3 grote rubrieken aan bod komen:
     
     \begin{enumerate}
-        \item \textbf{Functies}: Een lijst van alle nodige functies in de app (location tracking, text-to-speech, voorleesfunctie, language models, visualisatietypes)
-        \item \textbf{Integraties}: Een omschrijving van mogelijke AR integraties (Google Maps, Mapbox)
+        \item \textbf{Functies}: Een lijst van alle nodige functies in de app (location tracking, text-to-speech, voorleesfunctie, language models, visualisatietypes, Sclera pictogrammen)
+        \item \textbf{Integraties}: Een omschrijving van mogelijke AR integraties (Google Maps, Mapbox, Koombea, AR City, Sygic)
         \item \textbf{Werkwijze en denkpatronen}:Een selectie van enkele mogelijke manieren waarmee interactie kan geïnitieerd worden inclusief AR (kleuren, geluiden, patronen, figuren, ...)
     \end{enumerate}
 
@@ -120,15 +119,13 @@
     
     Hierbij wordt afgetoetst welke mogelijkheden voor handen zijn om de software in werking te laten treden. Om te achterhalen wat de beste optie(s) zijn, zullen de inzichten, verworven in de ontwikkeling van het softwaregedeelte, geïmplementeerd worden via verschillende platformen zoals een tablet, een smartwatch, een smartphone of een combinatie ervan.
     
-    \textbf{Latere innovaties} \\
-    
-    Uit \emph{Bevraging van de noden, Onderzoek Software, POC} en \emph{Hardwarecomponenten} zullen allicht nog verschillende mogelijkheden, die later kunnen toegevoegd worden, tot uiting komen. Deze innovaties zullen variëren in functie van verdere samenwerkingen met bedrijven tot nieuwe functies die dienen als aanvulling op bestaande functionaliteiten en extra mogelijke integraties. Deze fase zal samengevat worden in een opsomming met potentieel bijkomende add-on's.
-    
     \section{Proof-of-concept}% \\
     \label{sec:proof-of-concept}
     De POC zal worden uitgewerkt op een smartphone voor een aantal specifieke routes waarin minstens 1 openbaar vervoersmiddel (trein, bus) is geïntegreerd.
-    Praktijkexperiment
-    Een geselecteerde doelgroep kinderen zal de smartphone met applicatie uittesten en nadien feedback geven over het gebruiksgemak. Een van de hoger vermelde begeleidingsorganisaties kan hierbij helpen en tevens feedback geven over het experiment.
+    
+    \section{Praktijkexperiment}
+    \label{sec:praktijkexperiment}
+    Een geselecteerde doelgroep zal de smartphone met applicatie uittesten in twee fasen en nadien feedback geven over het gebruiksgemak. In test 1 worden de locaties A en B vooraf bepaald en ingevuld door een begeleider. Na afloop geven de gebruikers feedback over de interactieve ervaring gecreëerd dankzij AR. In de tweede test zullen de gebruikers zelf via een omschrijving het eindpunt invullen. Hun startpunt wordt bepaald op basis van de locatiegegevens. Een van de hoger vermelde begeleidingsorganisaties kan hierbij helpen en tevens feedback geven over het experiment en de integratie van de specifieke communicatiemiddelen zoals Sclera.
 
 
 
@@ -146,8 +143,8 @@
     % \label{sec:verloop}
     % In de flowchart wordt een beeld geschetst van de logische stappen waaruit het onderzoek bestaat. De tijdslijn van de opeenvolgende fasen is uitgezet in een Gantt-chart. De bevraging van de stakeholders wordt opgestart zodra een eerste beeld is gevormd via screening van bestaande tools. De software uitwerking van de POC start zodra al deze resultaten verwerkt zijn tot een duidelijke omschrijving van de noden en functionaliteiten. Met de eerste POC resultaten kunnen in parallel ook hardwarecomponenten gezocht worden. Bij het afronden van deze concrete uitwerkingsfasen wordt verder aangevuld met mogelijke latere innovaties. De resultaten omvatten duidelijke keuzes voor de finale POC en in de conclusies worden deze opnieuw getoetst aan de initiële doelstellingen en verwachtingen. Het neerschrijven van alle bevindingen in de scriptie loopt gedurende het volledige traject van het onderzoek. \\\\
     
-    % \textbf{Flowchart} \\\\
-    % \includegraphics[width=\columnwidth,height=11cm]{flow}
+    \textbf{Flowchart} \\\\
+    \includegraphics[width=\columnwidth,height=11cm]{flow}
     
     % \vspace{5mm}
     
@@ -155,5 +152,21 @@
     % \includegraphics[width=\columnwidth]{gantt}
     % \input{voorstel-inhoud}
     \printbibliography[heading=bibintoc]
+    
+    \footnote{\url{https://www.belgiantrain.be/nl}}Nationale Maatschappij der Belgische Spoorwegen (NMBS) \\
+    \footnote{\url{https://www.delijn.be/nl/}}De Lijn \\
+    \footnote{\url{https://www.koombea.com}}KoomBea \\
+    \footnote{\url{https://www.mapbox.com/augmented-reality}}Mapbox \\
+    \footnote{\url{https://www.sclera.be/nl/picto/overview}}Sclera \\
+    \footnote{\url{https://www.sygic.com}}Sygic \\
+    \footnote{\url{https://arcitygame.nl}}AR City \\
+    \footnote{\url{https://arvr.google.com}}Google ARVR \\
+    \footnote{\url{https://www.google.com/maps}}Google Maps \\
+    \footnote{\url{https://ridedott.com/nl/}}Dott \\
+    \footnote{\url{https://www.villo.be/nl/home}}Villo \\
+    \footnote{\url{ https://fiolavzw.be}}Fiola VZW \\
+    \footnote{\url{https://www.tanderuis.be}}Tanderuis \\
+    \footnote{\url{https://www.vaph.be}}Vlaams agentschap voor personen met een handicap (VAPH)\\
+    
 
 \end{document}
