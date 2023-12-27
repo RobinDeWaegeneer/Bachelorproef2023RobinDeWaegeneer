@@ -26,3 +26,7 @@ jobs:
 
           # Always keep the most recent artifact
           skip-recent: 1
+
+          # Github token
+          github_token: ${{ secrets.BAP_Robin }}
+         
