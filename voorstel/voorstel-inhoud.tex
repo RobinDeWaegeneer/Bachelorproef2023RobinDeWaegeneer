@@ -1,39 +1,53 @@
+\hyphenation{mo-bi-li-teits-tool}
+
 %---------- Inleiding ---------------------------------------------------------
 
 \section{Introductie}%
 \label{sec:introductie}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
-
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
-
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+    Mensen met een mentale beperking ondervinden bij het gebruik van bestaande mobiliteitstools problemen, omdat deze uitgaan van een basisniveau lees- en schrijfvaardigheid waarover zij niet beschikken. 
+    Bovendien is in sommige gevallen ook hun tijds- en ruimtebesef gelimiteerd. 
+    Het globale objectief van het onderzoek is een tool te ontwikkelen om deze doelgroep via Augmented Reality (AR) ondersteuning deze op een efficiënte en veilige manier te gebruiken. 
+    De proof-of-concept (POC) wordt zo eenvoudig mogelijk ontwikkeld, zodat ze gestructureerd hun weg kunnen vinden met behulp van het openbaar vervoer. 
+    Door bestaande tools te screenen, al dan niet gericht op onze doelgroep, en deze af te toetsen door bevraging van verschillende stakeholders, wordt een meer optimale tool in kaart gebracht. 
+    Kort gezegd: hoe geraakt iemand die niet kan (klok)lezen zonder enige begeleiding van punt A naar punt B met visuele en/of auditieve signalen aan de hand van AR binnen het juiste tijdsbestek?
+    We zijn ervan overtuigd dat deze mobiliteitstool een grote impact en meerwaarde zal hebben voor deze doelgroep door hun limieten te verleggen en zelfstandigheid te vergroten.
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+  De literatuurstudie zal een overzicht maken van de bestaande tools zoals de applicaties van NMBS\footnote{\url{https://www.belgiantrain.be/nl}}, De Lijn\footnote{\url{https://www.delijn.be/nl/}} en standaard routeplanners. 
+  Deze applicaties en websites zijn gebaseerd op het principe dat de gebruiker zelfstandig een adres en tijdstip zelf kan ingeven en maken niet altijd gebruik van locatiebepaling, wat voor de doelgroep een duidelijke hinderpaal is.
+    Daarnaast zullen diverse Augmented Reality (AR) methodes binnen de huidige state of the art vergeleken worden voor het verbeteren van de gebruikerservaring. 
+    Mapbox AR\footnote{\url{https://www.mapbox.com/augmented-reality}} maakt gebruik van points of interest terwijl Google Maps AR \footnote{\url{https://arvr.google.com}} inzet op multidimensionele visualisatie om de gebruiker comfortabel aan te sturen tijdens het navigeren. 
+    Met behulp van de camera van het mobiele apparaat worden real-time beelden van de omgeving vastgelegd, waarbij digitale routeaanwijzingen over de werkelijke beelden worden geprojecteerd. 
+    Dit zorgt voor een intuïtieve en praktische navigatie-ervaring, vooral in stedelijke gebieden waar traditionele kaarten mogelijk minder effectief zijn. 
+    Mapbox AR onderscheidt zich door zijn typische karakteristiek van geavanceerde aanpasbaarheid en integratiemogelijkheden. 
+    Deze tool biedt ontwikkelaars een krachtig platform waarmee ze op maat gemaakte augmented reality-toepassingen kunnen creëren, variërend van navigatie tot locatiegebaseerde informatie. 
+    Hierdoor hebben ontwikkelaars de flexibiliteit om kaartgegevens aan te passen, aangepaste overlays toe te voegen en de gebruikerservaring te optimaliseren voor specifieke doeleinden. 
+    Beide tools vertegenwoordigen technologieën binnen het domein van augmented reality en kaartnavigatie. Ze tonen de evolutie aan van traditionele kaartapplicaties naar meer dynamische, op AR gebaseerde oplossingen.  
+    Ook Koombea\footnote{\url{https://www.koombea.com}} verhoogt de gebruikerservaring en met AR City\footnote{\url{https://arcitygame.nl}} komt de locatie effectief tot leven dankzij bijkomende informatie. 
+    Sygic\footnote{\url{https://www.sygic.com}} werd specifiek ontwikkeld voor auto GPS-systemen om de bestuurderservaring te optimaliseren, maar kan een toegevoegde waarde hebben wanneer de gebruiker tijdens een busrit het traject mee wil opvolgen. 
+    Functionaliteiten van elk deze tools zullen gescreend worden om te bepalen of zij in aanmerking komen voor integratie in de proof-of-concept (POC). 
+    De implementatie van locatiegevoelige informatie in combinatie met de AR visualisatie neemt diverse barrières weg voor de doelgroep. 
+    Zij hoeven immers niet het adres te kennen van hun startpunt. Het eindpunt kunnen ze bv. omschrijven via een pictogram zoals deze gebruikt worden in Sclera\footnote{\url{https://www.sclera.be/nl/picto/overview}}. 
+    Deze pictogrammen worden standaard aangeleerd bij onze doelgroep ter bevordering van hun communicatie en visualisatie van hun dagplanning.
+    Naast het openbaar vervoer kunnen andere systemen zoals Dott\footnote{\url{https://ridedott.com/nl/}} en Villo\footnote{\url{https://www.villo.be/nl/home}} worden overwogen omdat dergelijke fietsen en steps verspreid staan in diverse steden. 
+    Ze bieden een bijkomende optie voor het verplaatsen van punt A naar punt B op een efficiënte manier.
+    Op hardwaregebied ontwikkelde Google in 2014 een smart device genaamd Google Glasses. 
+    Deze brillen hadden als doel om AR een extra boost te geven aan de hand van een concreet concept. 
+    Het product kreeg een tweede versie in 2017, als ondernemingseditie, maar had geen succes en eerder dit jaar in maart 2023 kondigde Google aan dat ze het project stopzetten \autocite{Gvora2023}.
+    Tot slot geldt dat de doelgroep die niet in staat is te lezen of schrijven, wel gebruik kan maken van text-to-speech functionaliteit om de gewenste locatie te omschrijven. 
+    De tool moet met andere woorden ook deze stemherkenning als ondersteuning bieden. 
+    Dankzij artificiële intelligentie (AI) wordt dan de beste route berekent en tevens de beste manier om daar gemakkelijk te geraken \autocite{Soni2023a}. 
+    Het gebruik van datastructuren zal toelaten deze locatie informatie te linken aan het routepatroon \autocite{Ruta2010}. 
+    Bovendien kunnen deze patronen potentiële knelpunten identificeren, hulp bieden bij het optimaliseren van routes als er verkeerswerken of files zijn. 
+    De noodzaak van dit systeem zijn realtime gegevens waarbij samenwerking met belanghebbende belangrijk is \autocite{Ciravegna2018}. 
+    Het opzetten van een meta model kan begeleiders van mensen met een matige mentale beperking helpen met het navigeren naar een juiste plaats. 
+    Door gegevensverzameling kan er aan de hand van algoritmes voorspellingen gemaakt worden wat voor deze persoon de favoriete manier van verplaatsen is of favoriete route is om te volgen naar het werk \autocite{Stepanov2003}. 
+    Als laatste kan er gebruik gemaakt worden van Internet of Things (IoT) tools voor het slim communiceren tussen verschillende apparatuur wat kan leiden tot nog betere prestaties in verplaatsing en routeberekening \autocite{Fatnassi2015}.
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -42,31 +56,19 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
-
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
-
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
-
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
-
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
-
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+Herschrijven van de methodologie
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+Uit de screening van bestaande tools zullen nuttige functies worden gebruikt als bouwstenen voor de proof-of-concept (POC) van dit onderzoek. 
+Dankzij de inzichten verworven in de bevraging van de noden en gesprekken met diverse stakeholders zal deze POC zo functioneel mogelijk zijn voor de specifieke doelgroep. 
+Tot slot zal dankzij een experimentele fase nagegaan worden hoe efficiënt de concrete uitwerking is en welke positieve impact AR implementatie kan hebben.
+In essentie kan worden gesteld dat er al enkele bruikbare tools ontwikkeld zijn, maar deze niet (volledig) aan de noden voldoen voor mensen met een matige mentale beperking. Deze hulpmiddelen vereisen nog steeds een redelijke kennis in het gebruik. Daarom wordt, na bevragingen, een POC opgesteld aan de hand van verworven inzichten. De bekomen resultaten van de literatuurstudie, in combinatie met de bevragingen en gebouwde POC, zullen een duidelijk beeld schetsen voor de samenwerking met een hardwarebedrijf of AR bedrijf. 
+Als resultaat hierop wordt meteen ook nagedacht over extra functies en integraties die dan samengevat worden als opsomming met latere innovaties.
 
