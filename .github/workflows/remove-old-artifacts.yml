@@ -8,9 +8,6 @@ on:
     # Every day at 1am
     - cron: '0 1 * * *'
 
-permissions:
-  actions: write
-
 jobs:
   remove-old-artifacts:
     runs-on: ubuntu-latest
@@ -18,15 +15,9 @@ jobs:
 
     steps:
     - name: Remove old artifacts
-      uses: RobinDeWaegeneer/Bachelorproef2023RobinDeWaegeneer@v1  # Update this line
+      uses: c-hive/gha-remove-artifacts@v1
       with:
-        # How long should an artifact be kept?
-        # '<number> <unit>', e.g. 5 days, 2 years, 90 seconds,
-        # parsed by Moment.js
-        age: '2 days'
-        
-        # Tagged artifacts (releases) are always kept
-        skip-tags: true
-
-        # Always keep the most recent artifact
-        skip-recent: 1
+        age: '2 days' # '<number> <unit>', e.g. 5 days, 2 years, 90 seconds, parsed by Moment.js
+        # Optional inputs
+        # skip-tags: true
+        # skip-recent: 5
