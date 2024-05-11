@@ -146,7 +146,7 @@ Volgens een onderzoek van \textcite{Mehta2019}, biedt Google Maps uitgebreide an
 \end{enumerate}
 
 \subsection{Mapbox}
-Mapbox\footnote{\url{https://www.mapbox.com}} werd opgericht in 2010 en onderscheidt zich door het bieden van aanpasbare kaartoplossingen die vooral gericht zijn op ontwikkelaars en bedrijven. Mapbox stelt gebruikers in staat om unieke en krachtige kaarten te creëren voor websites en mobiele applicaties door gebruik te maken van hun uitgebreide datasets en API's. De dienst biedt uitgebreide stylingopties en tools voor gegevensvisualisatie, waarmee bedrijven kaarten kunnen aanpassen aan hun specifieke branding en gebruikerservaringen. Het platform ondersteunt ook geavanceerde locatiefuncties zoals turn-by-turn navigatie, geospatiale analyses, en integratie van live locatiedata, wat het een populaire keuze maakt voor applicaties die dynamische locatiegebaseerde diensten vereisen (\textit{heb je hier voorbeelden van ?}). \newline
+Mapbox\footnote{\url{https://www.mapbox.com}} werd opgericht in 2010 en onderscheidt zich door het bieden van aanpasbare kaartoplossingen die vooral gericht zijn op ontwikkelaars en bedrijven. Mapbox stelt gebruikers in staat om unieke en krachtige kaarten te creëren voor websites en mobiele applicaties door gebruik te maken van hun uitgebreide datasets en API's. De dienst biedt uitgebreide stylingsopties en tools voor gegevensvisualisatie, waarmee bedrijven kaarten kunnen aanpassen aan hun specifieke branding en gebruikerservaringen. Het platform ondersteunt ook geavanceerde locatiefuncties zoals turn-by-turn navigatie, geospatiale analyses, en integratie van live locatiedata, wat het een populaire keuze maakt voor applicaties die dynamische locatiegebaseerde diensten vereisen. \newline
 
 Een studie door \textcite{Neene2017} illustreert de ontwikkeling van een mobiele GIS-eigendomskaarttoepassing met behulp van Mapbox-technologieën. Hierbij werd gebruik gemaakt van satellietbeelden en vectorisatietools om gedetailleerde kaarten te produceren voor mobiele cloud computing toepassingen, wat de flexibiliteit van Mapbox in verschillende technologische omgevingen benadrukt. De integratie van Mapbox met andere platforms zoals Google Maps verbetert de functionaliteit van geografische informatiesystemen. Deze integratie stelt ontwikkelaars in staat om uitgebreide features te benutten en op maat gemaakte oplossingen te bieden die aansluiten bij specifieke zakelijke behoeften \autocite{Hidayatulloh2023}. Een aantal voor- en nadelen die bijzondere aandacht vragen in ons onderzoek worden hier opgelijst:
 
@@ -274,22 +274,73 @@ Er zijn geen won't have requirements.
 \label{sec:bepalen geschikte navigatiemethode}
 
 % TODO: sectie 2.7 niet nagelezen want lijkt niet afgewerkt
-    
- \begin{table}[ht]
-        \centering
-        \begin{tabular}{@{}lllllll@{}}
-            \toprule
-            & A & B & C & D & E & F & G \\ 
-            \midrule
-            Snelheid (M1) & X & & X & & & X \\
-            \bottomrule
-        \end{tabular}
-        \caption{Vul hier de titel van de tabel in}
-        \label{tab:mijn_tabel}
+
+In deze sectie evalueren we verschillende navigatiemethodes om de meest geschikte methode te identificeren voor mensen met een mentale beperking. Het doel is om een methode te vinden die de zelfstandigheid van de gebruiker maximaliseert en tegelijkertijd de cognitieve belasting minimaliseert. \newline
+
+\textbf{A} & Basis navigatie \\
+\textbf{B} & Geavanceerde functies \\
+\textbf{C} & Ondersteuning voor Toegankelijkheid \\
+\textbf{D} & Offline mogelijkheden \\
+\textbf{F} & Gebruik van real-time data \\
+\textbf{G} & Kostenefficiëntie \\
+
+\begin{table}[ht]
+    \centering
+    \caption{Vereisten voor navigatietool Mapbox}
+    \label{tab:mapbox_requirements}
+    \begin{tabular}{|l|l|c|c|c|c|c|c|c|}
+        \hline
+        & \textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
+        \multirow{9}{*}{FR} & Algemene Bruikbaarheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Platform (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Intuïtiviteit (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Platformonafhankelijkheid (M4) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Visuele Aanwijzingen (M5) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Auditieve Instructies (M6) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Real-time Updates (M7) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Toegankelijkheidsfuncties (M8) &  & X & X &  &  &  &  \\ \cline{2-9}
+        & Connectiviteit (M9) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Aanpasbaarheid (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
+        & Offline Functionaliteit (S2) &  & X &  & X &  &  &  \\ \cline{2-9}
+        & Veiligheidsfuncties (C1) &  &  &  &  & X & X &  \\ \cline{2-9}
+        & Visual noise (W1) &  &  &  &  &  & X &  \\ \cline{2-9}
+        & Speciale Hardware (W2) &  &  &  &  &  &  & X \\ \hline
+        \multirow{5}{*}{NFR} & Snelheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Beperkte Geheugenbelasting (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Minimalisatie van Navigatiestappen (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Gebruiksvriendelijkheid voor Dyslexie (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
+        & Kosten-efficiëntie (C1) &  &  & X & X &  &  &  \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \caption{Vereisten voor navigatietool Google Maps}
+    \label{tab:google_maps_requirements}
+    \begin{tabular}{|l|l|c|c|c|c|c|c|c|}
+        \hline
+        & \textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
+        \multirow{9}{*}{FR} & Algemene Bruikbaarheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Platform (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Intuïtiviteit (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Platformonafhankelijkheid (M4) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Visuele Aanwijzingen (M5) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Auditieve Instructies (M6) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Real-time Updates (M7) & X & X & X &  & X &  &  \\ \cline{2-9}
+        & Toegankelijkheidsfuncties (M8) &  & X & X &  &  &  &  \\ \cline{2-9}
+        & Connectiviteit (M9) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Aanpasbaarheid (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
+        & Offline Functionaliteit (S2) &  & X &  & X &  &  &  \\ \cline{2-9}
+        & Veiligheidsfuncties (C1) &  &  &  &  & X & X &  \\ \cline{2-9}
+        & Visual noise (W1) &  &  &  &  &  & X &  \\ \cline{2-9}
+        & Speciale Hardware (W2) &  &  &  &  &  &  & X \\ \hline
+        \multirow{5}{*}{NFR} & Snelheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Beperkte Geheugenbelasting (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Minimalisatie van Navigatiestappen (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
+        & Gebruiksvriendelijkheid voor Dyslexie (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
+        & Kosten-efficiëntie (C1) &  &  & X & X &  &  &  \\ \hline
+    \end{tabular}
     \end{table}
-
-In deze sectie evalueren we verschillende navigatiemethodes om de meest geschikte methode te identificeren voor mensen met een mentale beperking. Het doel is om een methode te vinden die de zelfstandigheid van de gebruiker maximaliseert en tegelijkertijd de cognitieve belasting minimaliseert.
-
 \subsection{Criteria voor Evaluatie}
 \begin{itemize}
     \item \textbf{Gebruiksgemak:} Hoe intuïtief en eenvoudig is de interface voor de gebruiker?
