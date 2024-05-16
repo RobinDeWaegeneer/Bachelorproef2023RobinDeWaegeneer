@@ -27,28 +27,28 @@
 %% en geef het een gepaste titel.
 
 %%\lipsum[21-25]
-De methodologie van dit onderzoek naar navigatiemethoden voor mensen met een mentale beperking is opgedeeld in drie belangrijke fasen, elk essentieel voor het bereiken van de onderzoeksdoelstellingen: een literatuurstudie, een requirementsanalyse en de uitwerking van een Proof of Concept (PoC) inclusief een praktijkexperiment.\newline
+De methodologie van dit onderzoek naar navigatiemethoden voor mensen met een mentale beperking is opgedeeld in drie belangrijke fasen, elk essentieel voor het bereiken van de onderzoeksdoelstellingen: een literatuurstudie, een requirementsanalyse en de uitwerking van een Proof of Concept (PoC). Dankzij de requirementsanalyse is een long list van methoden ingekort tot een short list van diegenen best in aanmerking konden komen voor de doelgroep. De vergelijkende studie van deze shortlist is besproken in de resultatenverwerking en heeft aanleiding gegeven tot enkele gerichte conclusies, waarmee de scriptie is afgerond onder de vorm van enkele aanbevelingen.
 
-\subsection*{Fasering}
-De eerste fase bestaat uit een uitgebreide literatuurstudie waarin de basisbegrippen van navigatie en ondersteunende technologieën in kaart worden gebracht, evenals de concrete definitie van de impact van een mentale beperking op het gebruik hiervan.  Door bestaande navigatiemethoden en -tools te bestuderen, evalueren we hun toepasbaarheid en effectiviteit voor onze specifieke doelgroep. De hoofdvraag omvat diverse deelaspecten: kan locatiebepaling helpen om zelfstandige input van de gebruikers te omzeilen, kan de integratie van AR een toegevoegde waarde bieden omtrent veiligheidsgevoel en comfort en wat met de specifieke communicatiemogelijkheden voor mensen met een beperking? Deze fase is cruciaal voor het beantwoorden van de deelvraag over het huidige landschap van navigatiehulpmiddelen, meerbepaald het identificeren van eventuele lacunes in de bestaande technologieën. Het eindresultaat is een mapping die kan afgetoetst worden in functie van de gebruikersnoden en als input dient voor de requirementsanalyse.
+\subsection*{Mapping}
+De eerste fase heeft bestaan uit een uitgebreide literatuurstudie waarin de basisbegrippen van navigatie en ondersteunende technologieën in kaart worden gebracht, evenals de concrete definitie van de impact van een mentale beperking op het gebruik hiervan.  Door bestaande navigatiemethoden en -tools te bestuderen, is hun toepasbaarheid en effectiviteit voor onze specifieke doelgroep geëvalueerd. De hoofdvraag is daarom opgesplitst in diverse deelaspecten. Kan locatiebepaling helpen om zelfstandige input van de gebruikers te omzeilen ? Kan de integratie van AR een toegevoegde waarde bieden omtrent veiligheidsgevoel en comfort ? Welke specifieke communicatiemogelijkheden voor mensen met een beperking zijn bruikbaar? Deze fase is cruciaal geweest voor het beantwoorden van de deelvraag over het huidige landschap van navigatiehulpmiddelen, meerbepaald het identificeren van eventuele lacunes in de bestaande technologieën. Het eindresultaat is een mapping die kan afgetoetst worden in functie van de gebruikersnoden en als input heeft gediend voor de requirementsanalyse.
 
-\subsection*{Requirementsanalyse}
+\subsection*{Requirementsanalyse en Long List}
 
-Na het opbouwen van een theoretisch kader, start de tweede fase met een vergelijkende studie van de geïdentificeerde navigatiemethoden. Hierbij maken we gebruik van de MoSCoW-methode om prioriteit te geven aan verschillende requirements die essentieel zijn voor onze doelgroep. Ze houdt rekening met een aantal functies, integraties en mogelijke werkwijzen zoals hieronder opgelijst:
+Na het opbouwen van een theoretisch kader, is gestart met de tweede fase, namelijk een vergelijkende studie van de geïdentificeerde navigatiemethoden. Hierbij is gebruik gemaakt van de MoSCoW-methode om prioriteit te geven aan verschillende requirements die essentieel zijn voor de doelgroep. Ze heeft rekening gehouden met een aantal functies, integraties en mogelijke werkwijzen zoals hieronder opgelijst:
 
 \begin{enumerate}
     \item \textbf{Functies}: Een lijst van alle nodige functies in de app bv. location tracking, text-to-speech, voorleesfunctie, language models, visualisatietypes, Sclera pictogrammen
     \item \textbf{Integraties}: Een omschrijving van mogelijke AR integraties
     \item \textbf{Werkwijze en denkpatronen}: Een selectie van enkele mogelijke manieren waarmee interactie kan geïnitieerd worden inclusief AR (kleuren, geluiden, patronen, figuren, $\ldots$)
 \end{enumerate}
-    
-    We bepalen welke criteria 'Must Have', 'Should Have', 'Could Have' en 'Won't Have' zijn. Alleen de mogelijkheden die voldoen aan de 'Must Have'-criteria zullen worden geselecteerd voor verdere evaluatie. Dit zorgt ervoor dat de gekozen methoden niet alleen technisch haalbaar zijn, maar ook maximaal aansluiten bij de behoeften van mensen met een mentale beperking. Zij vormen de basis van de proof of concept.
-    
-    \subsection*{Proof of Concept en praktijktest}
-    
-    In de derde en laatste fase ontwikkelen we een proof of concept door een testapplicatie te bouwen met behulp van de geselecteerde navigatiemethoden. De POC zal worden uitgewerkt op een smartphone voor een aantal specifieke routes is. Deze applicatie, ontwikkeld in React Native, stelt ons in staat om de functionaliteit en gebruikerservaring van elke methode in de praktijk te testen met de doelgroep. We verzamelen vooreerst data over de bruikbaarheid, toegankelijkheid en effectiviteit door middel van directe observaties en gebruikersfeedback. Bovendien voeren we een data-analyse uit van de tijd nodig voor de verplaatsing van punt A naar punt B, zonder (nulmeting) en met gebruik van de applicatie. Hierdoor verschaffen we zowel inzicht in de effectiviteit van de mobiliteitstool, namelijk het verminderen van de benodigde tijd voor een verplaatsing, als in het gebruiksgemak.
-    
-    \subsection*{Evaluatie en aanbevelingen}
-    
-    Evaluatie van de moeilijkheidsgraad zoals ervaren door de gebruikers zal samen met de uitkomsten van deze test toelaten de meest geschikte navigatiemethode(s) te identificeren die best voldoen aan de behoeften van onze doelgroep, gebaseerd op de criteria vastgesteld in fase 2. Deze conclusies zullen essentieel zijn voor het aanbevelen van specifieke navigatietechnologieën en -benaderingen die kunnen worden geïmplementeerd in mobiliteitstools voor mensen met een mentale beperking, waarbij we streven naar het verbeteren van hun zelfstandigheid en kwaliteit van leven.
+
+Er is bepaald welke criteria 'Must Have', 'Should Have', 'Could Have' en 'Won't Have' zijn. Alleen de mogelijkheden die voldoen aan de 'Must Have'-criteria werden geselecteerd voor verdere evaluatie. Dit heeft ervoor gezorgd dat de gekozen methoden niet alleen technisch haalbaar zijn, maar ook maximaal aansluiten bij de behoeften van mensen met een mentale beperking. Zij hebben de basis gevormd van de proof of concept.
+
+\subsection*{Proof of Concept en Short List}
+
+In de derde en laatste fase is een proof of concept ontwikkeld door twee geselecteerde navigatiemethoden te evalueren voor de opbouw van een testapplicatie. De POC is uitgewerkt voor een smartphone voor een aantal specifieke routes. Deze applicatie is ontwikkeld in React Native om de functionaliteit en gebruikerservaring te evalueren in functie van de doelgroep. \textit{We verzamelen vooreerst data over de bruikbaarheid, toegankelijkheid en effectiviteit door middel van directe observaties en gebruikersfeedback. Bovendien voeren we een data-analyse uit van de tijd nodig voor de verplaatsing van punt A naar punt B, zonder (nulmeting) en met gebruik van de applicatie. Hierdoor verschaffen we zowel inzicht in de effectiviteit van de mobiliteitstool, namelijk het verminderen van de benodigde tijd voor een verplaatsing, als in het gebruiksgemak.} \textit{Dit was het deel van de praktijktest. Door wat werd dit dan vervangen? dat begrijp ik zelf niet zo goed dus gelieve dit hier eerst eens te schrijven in je eigen woorden.}
+
+\subsection*{Resultatenverwerking, evaluatie en aanbevelingen}
+
+De uitkomst van deze vergelijking is gebruikt om de meest geschikte navigatiemethode(s) te identificeren die best voldoen aan de behoeften van onze doelgroep, gebaseerd op de criteria vastgesteld in fase 2. Daaruit zijn essentiële conclusies gevolgd nodig voor het aanbevelen van specifieke navigatietechnologieën en -benaderingen die kunnen worden geïmplementeerd in mobiliteitstools voor mensen met een mentale beperking, waarbij gestreefd wordt naar het verbeteren van hun zelfstandigheid en kwaliteit van leven.
 
