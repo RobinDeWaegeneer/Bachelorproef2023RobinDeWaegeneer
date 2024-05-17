@@ -255,12 +255,46 @@ een Mapbox publieke token is nodig om de kaarten te kunnen gebruiken.
     \item Selecteer een emulator of scan de QR code met de Expo app op je telefoon.
 \end{enumerate}
 
-\section{Praktijkonderzoek}
-\label{sec:praktijkonderzoek}
+\section{Vergelijking}
+\label{sec:vergelijking}
 
 %mapbox getest
 
 %google maps getest functies
+
+De proof of concept bevat testen waarbij de requirements ten opzichte van de ontwikkelde applicatie gezet worden en die van Google Maps. Deze testen zullen inzichten, voorkeuren en beperkingen verwerven in wat het beste past bij de doelgroep. In dit deel zal het proces overlopen worden van de testen.
+
+\subsection{Verloop van de vergelijking}
+\label{sec:verloop van de vergelijking}
+
+Voor de testen afgenomen worden moet er een duidelijk stappenplan opgesteld worden van hoe de testen uitgevoerd moeten worden. Het belang van deze testen is om te kijken wat het best bij de doelgroep aansluit. Een belangrijk aspect van deze testen is dat de gebruikers hun locatie moeten kunnen onthouden of de locatie vooraf is ingegeven geweest. De eindbestemming kan ook vooraf ingesteld worden voor de doelgroep indien dit een vaste plaats is. \newline
+
+Het testen bestaat uit een paar belangrijke fases. In de voorbereidende fase bepalen waar de gebruiker zich naartoe wil verplaatsen en op welke manier. Ook is het belangrijk dat de applicatie correct staat ingesteld voor de gebruiker.\newline
+
+Het testen van de applicaties zelf zal gebeuren op vlak van verschillende factoren zoals functionaliteiten, de kost en privacy. Hieruit kunnen we dan afstemmen wat het beste pas voor onze doelgroep. Als eerste worden de functionaliteiten getest, welke mogelijkheden zijn er allemaal met de applicatie: de integratie van iconen, de mogelijkheid van AR, offline kaarten, spraakopdrachten, ... . De tweede factor waarmee rekening zal gehouden is de kost. Als laatste is de privacy en gegevensbeheer van de applicatie. Hoe wordt er omgegaan met de gegevens van de gebruiker.
+
+\subsection{Opmerkingen tijdens de vergelijking}
+\label{sec:opmerkingen tijdens de testen}
+
+Tijdens het testen vielen enkele zaken op bij het gebruiken van de applicaties. Mapbox is geen `echte` applicatie die je kan installeren. Voor het gebruiken van de Mapbox applicatie moet je een eigen applicatie ontwikkelen voor het gebruiken van hun functionaliteiten. Voor het ontwikkelen van de applicatie is een bepaald vlak van kennis vereist voor deze zaken te kunnen implementeren. De applicatie brengt ook een kost met zich mee er is een gratis level waarop je de API kan gebruiken van Mapbox maar vanaf een bepaald aantal verzoeken is er een pay-as-you-go model waaraan je vasthangt. Naast alle standaard functionaliteiten die Mapbox aanbied zoals een gewone map met een route lijn is de optie van AR mogelijkheid er en het vinden van dichtbij horeca zaken. Ze ondersteunen ook realtime gegevens verkeersinformatie. Op vlak van privacy het enige wat Mapbox vereist is je locatiegegevens indien het gebruik van AR ook je camera. Het grootste voordeel dat Google Maps tov Mapbox biedt is dat het een volledig gratis applicatie waarbij alles functies vrij te verkrijgen zijn waaronder hun AR functie ook wel bekend onder de naam \textit{Live View}. Google Maps biedt ook realtime verkeersinformatie aan en het maakt het mogelijk om route op te slaan voor offline gebruik. Een ander interessant voordeel is dat ze ook de realtime gegevens van het openbaar vervoer bijhouden voor bussen, treinen en trams. Voor privacy vereisen ze dezelfde zaken als die van Mapbox afhankelijk van het gebruik van AR.
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|m{5cm}|c|c|}
+        \hline
+        \textbf{Requirements} & \textbf{Mapbox} & \textbf{Google Maps} \\
+        \hline
+        Voice assistent & x & - \\
+        \hline
+        Augmented Reality (AR) & - & x \\
+        \hline
+        Real-time gegevens & x & x \\
+        \hline
+    \end{tabular}
+    \caption{Vergelijking van functies tussen Mapbox en Google Maps}
+    \label{tab:mapbox_vs_googlemaps}
+\end{table}
 
 \section{Discussie}
 \label{sec:discussie}
