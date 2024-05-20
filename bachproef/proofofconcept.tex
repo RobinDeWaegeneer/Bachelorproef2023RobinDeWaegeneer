@@ -5,13 +5,13 @@
 \chapter{\IfLanguageName{dutch}{Proof of Concept}{Proof of Concept}}%
 \label{ch:proof-of-concept}
 
-Dit deel van het onderzoek presenteert een proof of concept gericht op de beoordeling van de gekozen navigatiemethoden die gebruikt kunnen worden voor mensen met een mentale beperking. Het doel van de proof of concept is de efficiëntie, bruikbaarheid en gebruiksvriendelijkheid van deze methoden te onderzoeken aan de hand van een applicatie. De ontwikkeling van deze applicatie en hieruit gehaalde resultaten worden besproken. Als laatste zal er besproken worden welke navigatietool de meest geschikte is voor de doelgroep.
+Dit deel van het onderzoek presenteert een Proof of Concept gericht op de beoordeling van de gekozen navigatiemethoden die gebruikt kunnen worden voor mensen met een mentale beperking. Het doel van de Proof of Concept is de requirements van deze methoden te onderzoeken aan de hand van een applicatie. De ontwikkeling van deze applicatie en hieruit gehaalde resultaten worden besproken. Als laatste zal er besproken worden welke navigatietool de meest geschikte is voor de doelgroep.
 
 \section{Ontwikkeling van de applicatie}
 \label{sec:ontwikkeling van de applicatie}
-In dit onderdeel wordt de opbouw van de applicatie besproken. Hieruit zal duidelijk worden hoe de applicatie opgebouwd is. De code is niet relevant voor het verdere verloop van het onderzoek. Als eerste worden de belangrijkste onderdelen besproken. Een nieuw React Native project wordt aangemaakt aan de hand van Node.js en een terminal. Na het opzetten van dit project, moet er een Mapbox account gecreëerd worden om een publieke token te kunnen verkrijgen zodat er gebruik gemaakt kan worden van hun diverse mappen. \newline
+In dit onderdeel wordt de opbouw van de applicatie besproken. Hieruit zal duidelijk worden hoe de applicatie opgebouwd is. De code is niet relevant voor het verdere verloop van het onderzoek. Als eerste worden de belangrijkste onderdelen besproken. Een nieuw React Native project wordt aangemaakt aan de hand van Node.js en een terminal. Na het opzetten van dit project, moet er een Mapbox account gecreëerd worden om een publieke token te kunnen verkrijgen zodat er gebruik gemaakt kan worden van hun diverse kaarten. \newline
 
-De applicatie bestaat uit één eenvoudig scherm. Op Figuur \ref{fig:Scherm met een knop om de route op te vragen} is te zien dat er een Mapbox map ingeladen wordt en een invoerveld met een knop. Het proces wordt in gang gezet wanneer op de knop gedrukt wordt en een correct adres is ingegeven. Wanneer een foutief adres wordt ingegeven zal er een foutmelding komen en wordt het proces onderbroken. Bij Figuur \ref{fig:Scherm met knop waar route die opgevraagd is} is de route gegeneerd die op het scherm komt wanneer op de knop gedrukt wordt en een correct adres ingegeven is.
+De applicatie bestaat uit één eenvoudig scherm. Op Figuur \ref{fig:Scherm met een knop om de route op te vragen} is te zien dat er een Mapbox map ingeladen wordt en een invoerveld met een knop. Het proces wordt in gang gezet wanneer op de knop gedrukt wordt en een correct adres is ingegeven. Wanneer een foutief adres wordt ingegeven zal er een foutmelding komen en wordt het proces onderbroken. Bij Figuur \ref{fig:Scherm met knop waar route die opgevraagd is} is de route gegeneerd te zien. Deze komt op het scherm wanneer op de knop gedrukt wordt en een correct adres ingegeven is.
 
 %begin{lstlisting}[caption={Code-voorbeeld van het navigatiescherm}, label=code-voorbeeld navigatiescherm, captionpos=b]
 %    Mapbox.setAccessToken('MAPBOX_PUBLIC_TOKEN');
@@ -242,22 +242,27 @@ De applicatie bestaat uit één eenvoudig scherm. Op Figuur \ref{fig:Scherm met 
 \subsection{Installatie en opstarten van de applicatie}
 \label{sec:installatie en opstarten van de applicatie}
 
+% TODO: voeg een url toe naar installatie instructies voor Node.js
+% TODO: die Google Play API key heb je hieronder niet vermeldt in de inleiding. Hebben we die effectief nog nodig? De instructies om ze te verkrijgen moeten in de inleiding, de aanpassing van de code hieronder. Voeg ook een link voor de publieke token van Mapbox toe.
+
 Zorg ervoor dat Node.js geïnstalleerd is op je systeem en in je \texttt{\$PATH} variabelen staat.
 een Mapbox publieke token is nodig om de kaarten te kunnen gebruiken.
 
 \begin{enumerate}
     \item Clone de repository.
     \item Voer `npm install` uit in de hoofdmap van de repository.
-    \item In \texttt{App.js}, vervang 'YOUR\_MAPBOX\_PUBLIC\_KEY' door je eigen Mapbox publieke token.
-    \item Bij \textbf{MapboxUrl} in \texttt{App.js}, vervang \texttt{key=YOUR\_MAPBOX\_PUBLIC\_KEY} aan het einde van de URL met je eigen Mapbox publieke token.
+    \item Vervang in \texttt{App.js} \texttt{YOUR\_MAPBOX\_PUBLIC\_KEY} door je eigen publieke token van Mapbox.
+    \item Vervang in de variabele \texttt{MapboxUrl} in \texttt{App.js} \texttt{key=YOUR\_MAPBOX\_PUBLIC\_KEY} aan het einde van de URL met je eigen publieke token van Mapbox.
     \item Je hebt ook een \textbf{Google API key} \texttt{YOUR\_GOOGLE\_API\_KEY} nodig voor het maken van de route. Deze kan je verkrijgen op de Google Cloud Platform\footnote{\url{https://cloud.google.com/?hl=nl}}.
-    \item Voer `npx expo start` uit om de applicatie te starten. Je kan de optie \texttt{--android} of \texttt{--ios} toevoegen om de applicatie te starten in een specifieke emulator.
+    \item Voer \texttt{npx expo start} uit om de applicatie te starten. Je kan de optie \texttt{--android} of \texttt{--ios} toevoegen om de applicatie te starten in een specifieke emulator.
     \item Selecteer een emulator of scan de QR code met de Expo app op je telefoon.
 \end{enumerate}
 
 
 \section{Mapbox}
 \label{sec:mapbox}
+
+% TODO: geen secties zonder korte inleiding ervoor! Misschien kan je hierin vermelden hoe je aan bepaalde informatie gekomen bent?
 
 \subsection*{Algemene bruikbaarheid}
 Mapbox biedt een veelzijdig platform voor het maken van op maat gemaakte kaarten en locatiegebaseerde applicaties. Het wordt voor hoge aanpasbaarheid, nauwkeurige kaarten en robuuste API's gebruikt. Het platform is geschikt voor verschillende gebruiksscenario's, van eenvoudige kaartintegraties tot complexe data-analyse en visualisaties.
@@ -266,13 +271,13 @@ Mapbox biedt een veelzijdig platform voor het maken van op maat gemaakte kaarten
 Mapbox ondersteunt meerdere platformen, waaronder web, iOS en Android. Het biedt SDK's en API's die integratie met populaire frameworks en programmeertalen zoals JavaScript, Swift en Kotlin mogelijk maken. Hierdoor is Mapbox een flexibele keuze voor ontwikkelaars die kaarten in hun applicaties willen integreren.
 
 \subsection*{Intuïtiviteit}
-De gebruikersinterface van Mapbox Studio is ontworpen voor zowel beginners als gevorderde gebruikers. Het biedt een grafische interface voor het ontwerpen en aanpassen van kaarten zonder dat er uitgebreide programmeerkennis vereist is. Voor meer geavanceerde gebruikers is er uitgebreide documentatie beschikbaar.
+De gebruikersinterface van Mapbox Studio is ontworpen voor zowel beginners als gevorderde gebruikers. Het biedt een grafische interface voor het ontwerpen en aanpassen van kaarten zonder dat er uitgebreide programmeerkennis vereist is. Voor meer geavanceerde gebruikers is een uitgebreide documentatie beschikbaar.
 
 \subsection*{Platformonafhankelijkheid}
-Mapbox is platformonafhankelijk en kan worden gebruikt in verschillende omgevingen, waaronder mobiele apparaten, desktops en het web. Dit maakt het een veelzijdige oplossing voor diverse aan toestellen.
+Mapbox is platformonafhankelijk en kan worden gebruikt in verschillende omgevingen, waaronder mobiele apparaten, desktops en het web. Dit maakt het een veelzijdige oplossing voor diverse toestellen.
 
 \subsection*{Visuele aanwijzingen}
-Mapbox biedt uitgebreide mogelijkheden voor het toevoegen van visuele aanwijzingen, zoals aangepaste markeringen, AR-toepassingen, $\ldots$. Dit helpt gebruikers om gemakkelijk hun weg te vinden.
+Mapbox biedt uitgebreide mogelijkheden voor het toevoegen van visuele aanwijzingen, zoals aangepaste markeringen, AR-toepassingen\ldots Dit helpt gebruikers om eenvoudig hun weg te vinden.
 
 \subsection*{Auditieve instructies}
 Hoewel Mapbox zelf geen ingebouwde auditieve instructies biedt, kan het worden geïntegreerd met andere diensten en tools die spraaknavigatie ondersteunen. Ontwikkelaars kunnen bijvoorbeeld gebruikmaken van Text-to-Speech (TTS) APIs om auditieve aanwijzingen te genereren.
@@ -314,10 +319,15 @@ Met Mapbox kunnen ontwikkelaars intuïtieve en directe navigatieoplossingen cre�
 Mapbox maakt het mogelijk om de vormgeving van kaarten en tekst aan te passen om de leesbaarheid te verbeteren voor mensen met dyslexie. Dit kan onder andere door het gebruik van geschikte lettertypen, kleuren en contrasten. Ook met behulp van AI kunnen voorstellen van locaties gedaan worden.
 
 \subsection*{Het zou voordelig zijn als de navigatiemethodes kostenefficiënt zijn, zodat onnodige kosten vermeden worden, wat de dienst toegankelijker maakt voor de eindgebruiker en de aanbieder}
-Mapbox biedt flexibele prijsmodellen, waaronder een gratis tier voor basisgebruik en schaalbare betalingsopties voor geavanceerdere toepassingen. Dit maakt het mogelijk om kostenefficiënte navigatieoplossingen te implementeren die aansluiten bij de behoeften en budgetten van verschillende gebruikers.
+
+% TODO: misschien vermelden tussen welke prijsklassen de verschillende plannen van Mapbox zich bevinden?
+
+Mapbox biedt flexibele prijsmodellen, waaronder een gratis versie voor basisgebruik en schaalbare betalingsopties voor geavanceerdere toepassingen. Dit maakt het mogelijk om kostenefficiënte navigatieoplossingen te implementeren die aansluiten bij de behoeften en budgetten van verschillende gebruikers.
 
 \section{Google Maps}
 \label{sec:google maps}
+
+% TODO: geen secties zonder korte inleiding ervoor!
 
 \subsection*{Algemene bruikbaarheid}
 Google Maps biedt gedetailleerde routebeschrijvingen, verkeersinformatie, en zoekfuncties voor nabijgelegen locaties.
