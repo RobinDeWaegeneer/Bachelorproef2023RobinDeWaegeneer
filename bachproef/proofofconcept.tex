@@ -242,11 +242,8 @@ De applicatie bestaat uit één eenvoudig scherm. Op Figuur \ref{fig:Scherm met 
 \subsection{Installatie en opstarten van de applicatie}
 \label{sec:installatie en opstarten van de applicatie}
 
-% TODO: voeg een url toe naar installatie instructies voor Node.js
-% TODO: die Google Play API key heb je hieronder niet vermeldt in de inleiding. Hebben we die effectief nog nodig? De instructies om ze te verkrijgen moeten in de inleiding, de aanpassing van de code hieronder. Voeg ook een link voor de publieke token van Mapbox toe.
-
-Zorg ervoor dat Node.js geïnstalleerd is op je systeem en in je \texttt{\$PATH} variabelen staat.
-een Mapbox publieke token is nodig om de kaarten te kunnen gebruiken.
+Zorg ervoor dat Node.js\footnote{\url{https://nodejs.org/en/download/package-manager/}} geïnstalleerd is op je systeem en in je \texttt{\$PATH} variabelen staat.
+een Mapbox publieke token is nodig om de kaarten te kunnen gebruiken en ook een Google API KEY  voor het renderen van de routes op de map. De Mapbox token\footnote{\url{https://account.mapbox.com}} is te vinden bij het dashboard van het account en de Google API KEY kan gevonden worden op het Google Developers Platform\footnote{\url{https://developers.google.com/maps/documentation/javascript/get-api-key}}.
 
 \begin{enumerate}
     \item Clone de repository.
@@ -263,6 +260,8 @@ een Mapbox publieke token is nodig om de kaarten te kunnen gebruiken.
 \label{sec:mapbox}
 
 % TODO: geen secties zonder korte inleiding ervoor! Misschien kan je hierin vermelden hoe je aan bepaalde informatie gekomen bent?
+
+Voor het uitvoeren van deze vergelijkende studie is er gebruikt gemaakt geweest van de Mapbox documentatie, Mapbox Studio en de Strava applicatie\footnote{\url{https://www.strava.com/?hl=nl-NL}}. Door deze aanpak is er een uitgebreid zicht gekomen op hoe een ontwikkelde ideale Mapbox applicatie er zou uitzien.
 
 \subsection*{Algemene bruikbaarheid}
 Mapbox biedt een veelzijdig platform voor het maken van op maat gemaakte kaarten en locatiegebaseerde applicaties. Het wordt voor hoge aanpasbaarheid, nauwkeurige kaarten en robuuste API's gebruikt. Het platform is geschikt voor verschillende gebruiksscenario's, van eenvoudige kaartintegraties tot complexe data-analyse en visualisaties.
@@ -322,12 +321,12 @@ Mapbox maakt het mogelijk om de vormgeving van kaarten en tekst aan te passen om
 
 % TODO: misschien vermelden tussen welke prijsklassen de verschillende plannen van Mapbox zich bevinden?
 
-Mapbox biedt flexibele prijsmodellen, waaronder een gratis versie voor basisgebruik en schaalbare betalingsopties voor geavanceerdere toepassingen. Dit maakt het mogelijk om kostenefficiënte navigatieoplossingen te implementeren die aansluiten bij de behoeften en budgetten van verschillende gebruikers.
+Mapbox biedt flexibele prijsmodellen, waaronder een gratis versie voor basisgebruik en schaalbare betalingsopties voor geavanceerdere toepassingen. Dit kunnen kan gezien worden onder de naam pay-as-you-go wat wilt zeggen je betaald voor wat je effectief gebruikt daarop is het prijsmodel van Mapbox gebaseerd. Dit maakt het mogelijk om kostenefficiënte navigatieoplossingen te implementeren die aansluiten bij de behoeften en budgetten van verschillende gebruikers. 
 
 \section{Google Maps}
 \label{sec:google maps}
 
-% TODO: geen secties zonder korte inleiding ervoor! Misschien kan je hierin vermelden hoe je aan bepaalde informatie gekomen bent?
+Het verzamelen van de informatie is gebeurd aan de hand van de Google Maps applicatie en Google Maps documentatie. Met deze informatie kunnen we een brede kijk nemen op de functionaliteiten van Google Maps en een goed beeld scheppen van de applicatie.
 
 \subsection*{Algemene bruikbaarheid}
 Google Maps biedt gedetailleerde routebeschrijvingen, verkeersinformatie, en zoekfuncties voor nabijgelegen locaties.
@@ -336,9 +335,7 @@ Google Maps biedt gedetailleerde routebeschrijvingen, verkeersinformatie, en zoe
 Google Maps is beschikbaar op meerdere platformen, waaronder web, iOS en Android. Het biedt een sterke integratie met andere Google-diensten en heeft een uitgebreide API voor ontwikkelaars om kaarten en locatiegebaseerde functies in hun eigen applicaties te integreren.
 
 \subsection*{Intuïtiviteit}
-De intuïtiviteit van Google Maps is hoog, met een eenvoudige en overzichtelijke interface. Gebruikers kunnen eenvoudig zoeken naar locaties, routes plannen en informatie over verkeersomstandigheden en openbaar vervoer bekijken. De applicatie maakt gebruik van de bekende Google UI/UX patronen.
-
-% TODO: zoals welke patronen?
+De intuïtiviteit van Google Maps is hoog, met een eenvoudige en overzichtelijke interface. Gebruikers kunnen eenvoudig zoeken naar locaties, routes plannen en informatie over verkeersomstandigheden en openbaar vervoer bekijken. De applicatie maakt gebruik van de bekende Google UI/UX patronen. Deze patronen bevatten een bepaalde visuele ontwerptaal voor de gebruikersinterface. Meer specifiek de kleuren, typografie, pictogrammen, \ldots Hiermee is er consistentie in verschillende applicaties. Deze patronen leggen ook de nadruk op de bepaalde zaken die het belangrijkste zijn in die applicatie, de focus ligt erg op bruikbaarheid.
 
 \subsection*{Platformonafhankelijkheid}
 De applicatie werkt naadloos op verschillende platformen en apparaten, inclusief desktops, laptops, tablets en smartphones. De gebruikerservaring is consistent en optimaal ongeacht het gebruikte apparaat.

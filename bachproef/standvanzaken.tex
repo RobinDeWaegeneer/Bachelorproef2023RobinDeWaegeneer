@@ -93,7 +93,6 @@ De algemene conclusie is dat AR systemen ontwikkeld moeten worden zodanig dat de
 
 \section{Artificiële Intelligentie}
 \label{sec:artificiele-intelligentie}
-%TODO: referentie bij de definitie van AI
 
 Artificiële Intelligentie (AI) omvat het vermogen van machines of computersystemen om taken uit te voeren die traditioneel menselijke intelligentie vereisen, zoals logisch redeneren, leren, en problemen oplossen \autocite{Sabouret2020}. AI-systemen gebruiken complexe algoritmen en technologieën voor machinaal leren om cognitieve vaardigheden na te bootsen, waardoor ze in staat zijn autonoom te functioneren in diverse omgevingen. 
 
@@ -197,7 +196,7 @@ De MoSCoW-methode is een prioriteringsframework gebruikt in projectbeheer om pro
 \subsection{Functionele requirements}
 \label{sec:functionele-requirements}
 
-% TODO: inleiding
+In deze sectie worden de functionele opgesteld aan de hand van de MoSCoW-methode. Door deze methode toe te passen, wordt duidelijk welke functionaliteiten nodig zijn voor de applicatie, welke minder cruciaal zijn, welke optioneel zijn en welke buiten de scope liggen van de applicatie. Hierdoor ligt de aandacht op de kritieke aspecten van de van de tool.
 
 \subsubsection{Must have}
 \begin{itemize}
@@ -260,72 +259,35 @@ Er zijn geen won't have requirements.
 
 In deze sectie worden de verschillende navigatiemethodes geëvalueerd om de meest geschikte methode te identificeren voor mensen met een mentale beperking. Het doel is om een methode te vinden die de zelfstandigheid van de gebruiker maximaliseert en tegelijkertijd de cognitieve belasting minimaliseert.
 
-% TODO: deze tabellen zien er vreemd uit. Ik zou in de kolommen de tools verwachten. Je moet afchecken aan welke requirements elke tool voldoet. Ik begrijp niet goed van waar je met die A t.e.m. F komt.
-
-\textbf{A} \& Basis navigatie \\
-\textbf{B} \& Geavanceerde functies \\
-\textbf{C} \& Ondersteuning voor Toegankelijkheid \\
-\textbf{D} \& Offline mogelijkheden \\
-\textbf{F} \& Gebruik van real-time data \\
-\textbf{G} \& Kostenefficiëntie \\
-
 \begin{table}[ht]
     \centering
-    \caption{Vereisten voor navigatietool Mapbox}
-    \label{tab:mapbox_requirements}
-    \begin{tabular}{|l|l|c|c|c|c|c|c|c|}
+    \begin{tabular}{|l|c|c|c|}
         \hline
-        & \textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
-        \multirow{9}{*}{FR} & Algemene Bruikbaarheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Platform (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Intuïtiviteit (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Platformonafhankelijkheid (M4) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Visuele Aanwijzingen (M5) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Auditieve Instructies (M6) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Real-time Updates (M7) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Toegankelijkheidsfuncties (M8) &  & X & X &  &  &  &  \\ \cline{2-9}
-        & Connectiviteit (M9) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Aanpasbaarheid (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
-        & Offline Functionaliteit (S2) &  & X &  & X &  &  &  \\ \cline{2-9}
-        & Veiligheidsfuncties (C1) &  &  &  &  & X & X &  \\ \cline{2-9}
-        & Visual noise (W1) &  &  &  &  &  & X &  \\ \cline{2-9}
-        & Speciale Hardware (W2) &  &  &  &  &  &  & X \\ \hline
-        \multirow{5}{*}{NFR} & Snelheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Beperkte Geheugenbelasting (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Minimalisatie van Navigatiestappen (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Gebruiksvriendelijkheid voor Dyslexie (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
-        & Kosten-efficiëntie (C1) &  &  & X & X &  &  &  \\ \hline
+        \textbf{Vereisten} & \textbf{Mapbox} & \textbf{Google Maps} \\ \hline
+        Algemene Bruikbaarheid (M1) & X & X \\
+        Platform (M2) & X & X \\
+        Intuïtiviteit (M3) & X & X \\
+        Platformonafhankelijkheid (M4) & X & X \\
+        Visuele Aanwijzingen (M5) & X & X \\
+        Auditieve Instructies (M6) & X & X \\
+        Real-time Updates (M7) & X & X \\
+        Toegankelijkheidsfuncties (M8) & X & X \\
+        Connectiviteit (M9) & X & X \\
+        Aanpasbaarheid (S1) & X & X \\
+        Offline Functionaliteit (S2) & X & X \\
+        Veiligheidsfuncties (C1) & X & X \\
+        Visual noise (W1) & X & X \\
+        Speciale Hardware (W2) & X & X \\
+        Snelheid (M1) & X & X \\
+        Beperkte Geheugenbelasting (M2) & X & X \\
+        Minimalisatie van Navigatiestappen (M3) & X & X \\
+        Gebruiksvriendelijkheid voor Dyslexie (S1) & X & X \\
+        Kosten-efficiëntie (C1) & X & X \\ \hline
     \end{tabular}
+    \caption{Vereisten voor navigatietools}
+    \label{tab:vereisten voor navigatietools}
 \end{table}
 
-\begin{table}[ht]
-    \centering
-    \caption{Vereisten voor navigatietool Google Maps}
-    \label{tab:google_maps_requirements}
-    \begin{tabular}{|l|l|c|c|c|c|c|c|c|}
-        \hline
-        & \textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
-        \multirow{9}{*}{FR} & Algemene Bruikbaarheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Platform (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Intuïtiviteit (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Platformonafhankelijkheid (M4) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Visuele Aanwijzingen (M5) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Auditieve Instructies (M6) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Real-time Updates (M7) & X & X & X &  & X &  &  \\ \cline{2-9}
-        & Toegankelijkheidsfuncties (M8) &  & X & X &  &  &  &  \\ \cline{2-9}
-        & Connectiviteit (M9) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Aanpasbaarheid (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
-        & Offline Functionaliteit (S2) &  & X &  & X &  &  &  \\ \cline{2-9}
-        & Veiligheidsfuncties (C1) &  &  &  &  & X & X &  \\ \cline{2-9}
-        & Visual noise (W1) &  &  &  &  &  & X &  \\ \cline{2-9}
-        & Speciale Hardware (W2) &  &  &  &  &  &  & X \\ \hline
-        \multirow{5}{*}{NFR} & Snelheid (M1) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Beperkte Geheugenbelasting (M2) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Minimalisatie van Navigatiestappen (M3) & X & X & X & X & X & X & X \\ \cline{2-9}
-        & Gebruiksvriendelijkheid voor Dyslexie (S1) &  & X & X & X &  &  &  \\ \cline{2-9}
-        & Kosten-efficiëntie (C1) &  &  & X & X &  &  &  \\ \hline
-    \end{tabular}
-    \end{table}
 \subsection{Criteria voor Evaluatie}
 \begin{itemize}
     \item \textbf{Gebruiksgemak:} Hoe intuïtief en eenvoudig is de interface voor de gebruiker?
@@ -336,6 +298,8 @@ In deze sectie worden de verschillende navigatiemethodes geëvalueerd om de mees
 
 \subsection{Evaluatie van Methodes}
 We beschouwen verschillende bestaande technologieën, zoals Google Maps, Mapbox en gespecialiseerde apps zoals Sygic, en beoordelen deze op bovenstaande criteria. De methodes worden ook getest in een reële omgeving om hun effectiviteit in praktijksituaties te bepalen. We zullen eerst een nulmeting uitvoeren\ldots
+
+Zoals weergegeven in tabel \ref{tab:vereisten voor navigatietools}, hebben Mapbox en Google Maps vrijwel hetzelfde aan kwa functionaliteiten. Ze voldoen aan alle veelgestelde vereisten die nodig zijn voor een efficiënte applicatie.
 
 \subsection{Aanbevolen Methode}
 Na grondige evaluatie en praktijktests wordt de meest geschikte navigatiemethode aanbevolen. Deze aanbeveling is gebaseerd op de mate waarin de methode voldoet aan de criteria en de feedback van testgebruikers.
