@@ -1,0 +1,228 @@
+%%=============================================================================
+%% Requiremenetsanalyse
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Bepalen van de geschikte navigatiemethode}{Requiremenetsanalyse}}%
+\label{ch:bepalen-van-de-geschikte-navigatiemethode}
+
+
+Het ontwikkelen van een geavanceerde navigatietool vereist een zorgvuldige afweging van verschillende navigatiemethodes zoals besproken in Sectie~\ref{sec:hedendaagse-navigatiemethodes}. Dit hoofdstuk beschrijft de vereisten die van cruciaal belang zijn voor de keuze tussen deze navigatiemethodes. Deze requirements komen voort uit de literatuurstudie uit Hoofdstuk~\ref{ch:stand-van-zaken}, en werden opgesteld in samenspraak met de copromotor. 
+
+Een eerste stap in de requirementsanalyse is het prioriteren van de requirements met behulp van de MoSCoW-methode. Door deze systematische aanpak kan een navigatiemethode gekozen worden die niet alleen technisch haalbaar is, maar ook optimaal aansluit bij de behoeften van de gebruikers.
+
+\section{Wat is MoSCoW?}
+
+De MoSCoW-methode is een prioriteringsframework gebruikt in projectbeheer om projectvereisten te categoriseren in vier categorieën: Must have, Should have, Could have, en Won't have~\autocite{Brush2023}. Deze categorieën tonen respectievelijk welke functionaliteiten nodig zijn voor de applicatie, welke minder cruciaal zijn, welke optioneel zijn en welke buiten de scope liggen van de applicatie. Hierdoor ligt de aandacht op de kritieke aspecten van de van de tool.  
+
+Deze methode bevordert een efficiënte middelentoewijzing en zorgt ervoor dat essentiële taken prioriteit krijgen~\autocite{Brush2023}. Dit is bijzonder nuttig binnen Agile projectbeheer voor het beheer van de projectomvang en het verbeteren van de productiviteit door duidelijk niet-essentiële elementen die niet worden aangepakt te definiëren.
+
+\section{Functionele requirements}
+\label{sec:functionele-requirements}
+
+In deze sectie worden de functionele requirements opgesteld aan de hand van de MoSCoW-methode.
+
+\subsection*{Must have}
+\begin{itemize}
+    \item \textbf{Platformonafhankelijkheid}: Het systeem moet functioneren onafhankelijk van het mobiele besturingssysteem (Android en iOS).
+    \item \textbf{Integratie}: Het systeem moet integreerbaar zijn in een mobiele applicatie.
+    \item \textbf{Visuele aanwijzingen}: Duidelijke visuele aanwijzingen zoals symbolen, pijlen of kleurcoderingen moeten de gebruiker door de route leiden.
+    \item \textbf{Auditieve instructies}: Moet gesproken aanwijzingen of geluidssignalen bieden voor gebruikers die visuele informatie moeilijk kunnen verwerken.
+    \item \textbf{Real-time updates}: Continue updates over de locatie van de gebruiker en aanpassingen aan veranderende omstandigheden zijn essentieel.
+    \item \textbf{Toegankelijkheidsfuncties}: Ondersteuning voor schermlezers, aanpasbare lettertypen en kleuren, en vergrotingsmogelijkheden.
+    \item \textbf{Connectiviteit}: Het systeem moet functioneel blijven bij kleine onderbrekingen in de internetverbinding.
+    \item \textbf{Routebegeleiding}: Het systeem moet routebegeleiding kunnen geven met behulp van Augmented Reality.
+    \item \textbf{Visual noise}: Het systeem mag geen visuele of auditieve verstoringen veroorzaken die de gebruiker kunnen afleiden.
+    \item \textbf{Speciale hardware}: Het systeem vereist geen speciale hardware voor augmented reality (AR) functies.
+\end{itemize}
+
+\subsection*{Should have}
+\begin{itemize}
+    \item \textbf{Offline functionaliteit}: Het systeem moet bepaalde functies offline kunnen uitvoeren zoals navigatie en routebegeleiding met of zonder AR.
+\end{itemize}
+
+\subsection*{Could have}
+\begin{itemize}
+    \item \textbf{Veiligheidsfuncties}: Ingebouwde waarschuwingen voor obstakels, gevaarlijke gebieden en suggesties voor veiligere routes.
+\end{itemize}
+
+\subsection*{Won't have}
+Er zijn geen won't have functionele requirements.
+
+
+\section{Niet-functionele requirements}
+\label{sec:niet-functionele-requirements}
+
+Deze sectie behandelt de niet-functionele requirements. Deze requirements omvatten de kwalitatieve aspecten die essentieel zijn voor het creëren van een gebruiksvriendelijke navigatietool die een aangename ervaring biedt aan de gebruikers uit de specifieke doelgroep van mensen met een mentale beperking. We richten ons hier op aspecten zoals de aanpasbaarheid, toegankelijkheid en algemene bruikbaarheid van de navigatiemethode.
+
+\subsection*{Must have}
+\begin{itemize}
+    \item {Algemene bruikbaarheid}: Het systeem moet toegankelijk zijn voor alle gebruikers, ongeacht hun specifieke beperkingen.
+    \item {Intuïtiviteit}: Het ontwerp moet duidelijk en eenvoudig zijn, met minimale complexiteit.
+    \item Het navigatieproces moet snel zijn, om tijdverlies en onzekerheid te minimaliseren.
+    \item De informatie die de gebruiker moet onthouden moet beperkt zijn, om het risico op fouten te verlagen.
+\end{itemize}
+
+\subsection*{Should have}
+\begin{itemize}
+    \item De navigatiemethodes moeten gebruiksvriendelijk zijn voor mensen met lees- en onthoudmoeilijkheden.
+\end{itemize}
+
+\subsection*{Could have}
+\begin{itemize}
+    \item De navigatiemethode moet kostenefficiënt zijn, zodat onnodige kosten vermeden worden, wat de dienst toegankelijker maakt voor de eindgebruiker en de aanbieder.
+\end{itemize}
+
+\subsection*{Won't have}
+
+Er zijn geen won't have requirements.
+
+
+Deze requirements worden gebruikt om de juiste navigatiemethode te kiezen.
+
+
+
+%%TODO zelfde bespreking als in POC vandaar kopiëren en in samenvattende tabel. In het begin bespreken wrm De lijn nmbs niet en sygic. + Screenshots
+%%TODO Tabel uit literatuurstudie meenemen
+
+\section{Mapbox}
+\label{sec:mapbox}
+
+Voor het uitvoeren van deze vergelijkende studie is er gebruikt gemaakt van de Mapbox documentatie, Mapbox Studio en de Strava applicatie\footnote{\url{https://www.strava.com/?hl=nl-NL}}. Door deze aanpak is er een uitgebreid zicht gekomen op hoe een ontwikkelde ideale Mapbox applicatie er kan uitzien.
+
+\subsection*{Platformonafhankelijkheid}
+Mapbox is platformonafhankelijk en kan worden gebruikt in verschillende omgevingen, waaronder mobiele apparaten, desktops en het web. Dit maakt het een veelzijdige oplossing voor diverse toestellen.
+
+\subsection*{Integratie}
+Mapbox biedt verschillende SDK's(Software Development kit) voor het ontwikkelen van een eigen applicatie. SDK's voor Android en iOs. Ze geven uitgebreidde mogelijkheden van kaarten terug, ook ondersteunen ze 3D-terreinweergaven, AR-navigatie en interactieve lagen. Er worden ook een allerlei API's aangeboden zoals statische map API, route API, plaats API, \ldots .
+
+\subsection*{Visuele aanwijzingen}
+Mapbox biedt uitgebreide mogelijkheden voor het toevoegen van visuele aanwijzingen, zoals aangepaste markeringen, AR-toepassingen\ldots Dit helpt gebruikers om eenvoudig hun weg te vinden.
+
+\subsection*{Auditieve instructies}
+Hoewel Mapbox zelf geen ingebouwde auditieve instructies biedt, kan het worden geïntegreerd met andere diensten en tools die spraaknavigatie ondersteunen. Ontwikkelaars kunnen bijvoorbeeld gebruikmaken van Text-to-Speech (TTS) APIs om auditieve aanwijzingen te genereren.
+
+\subsection*{Real-time updates}
+Mapbox ondersteunt real-time updates, waardoor kaarten dynamisch kunnen worden bijgewerkt met live data. Dit is essentieel voor toepassingen zoals verkeersinformatie of andere situaties waarbij actuele informatie cruciaal is.
+
+\subsection*{Toegankelijkheidsfuncties}
+Mapbox biedt diverse toegankelijkheidsfuncties, zoals ondersteuning voor screen readers en mogelijkheden voor het aanpassen van kleuren en contrasten om kaarten toegankelijker te maken voor een bredere doelgroep. 
+
+\subsection*{Connectiviteit}
+Mapbox vereist internetconnectiviteit voor het laden van kaarten en het ophalen van real-time data. Echter, het biedt ook mogelijkheden voor offline gebruik door kaarten vooraf te downloaden en lokaal op te slaan.
+
+\subsection*{Routebegeleiding}
+Mapbox biedt een Vision AR framework\footnote{\url{https://docs.mapbox.com/android/vision/examples/basic-ar-navigation/}} aan dat bovenop de Mapbox Vision SDK zit. Dit framework maakt het mogelijk om AR-navigatie te integreren in eigen ontwikkelde applicaties. Hierdoor kan AR op eigen behoeftes aangepast worden en de kit is ook bruikbaar voor zowel iOS en Android.
+
+\subsection*{Visual noise}
+Mapbox biedt tools om visuele ruis te minimaliseren door gebruikers de mogelijkheid te geven om overbodige details te verwijderen en de kaartweergave te optimaliseren voor duidelijkheid en gebruiksgemak. Dit is essentieel om de kaart leesbaar en nuttig te houden.
+
+\subsection*{Speciale hardware}
+Mapbox vereist geen speciale hardware en kan worden gebruikt op standaard computers en mobiele apparaten. Dit maakt het toegankelijk voor een groot aantal aan gebruikers en toepassingen.
+
+%-------------------------------------
+\subsection*{Offline functionaliteit}
+Mapbox ondersteunt offline functionaliteit door het mogelijk te maken om kaarttegels en andere gegevens vooraf te downloaden en lokaal op te slaan. Dit is bijzonder nuttig voor toepassingen in gebieden met beperkte of geen internettoegang.
+
+%--------------------------------------
+
+\subsection*{Veiligheidsfuncties}
+Mapbox biedt verschillende veiligheidsfuncties, zoals versleuteling van dataoverdracht en authenticatie via API-sleutels. Dit helpt om de integriteit en veiligheid van de gegevens en de applicaties te waarborgen.
+
+%--------------------------------------
+
+\subsection*{Het systeem moet toegankelijk zijn voor alle gebruikers, ongeacht hun specifieke beperkingen.}
+Mapbox biedt een veelzijdig platform voor het maken van op maat gemaakte kaarten en locatiegebaseerde applicaties. Het wordt voor hoge aanpasbaarheid, nauwkeurige kaarten en robuuste API's gebruikt. Het platform is geschikt voor verschillende gebruiksscenario's, van eenvoudige kaartintegraties tot complexe data-analyse en visualisaties.
+\subsection*{Het ontwerp moet duidelijk en eenvoudig zijn, met minimale complexiteit.}
+De gebruikersinterface van Mapbox Studio is ontworpen voor zowel beginners als gevorderde gebruikers. Het biedt een grafische interface voor het ontwerpen en aanpassen van kaarten zonder dat er uitgebreide programmeerkennis vereist is. Voor meer geavanceerde gebruikers is een uitgebreide documentatie beschikbaar.
+\subsection*{Het navigatieproces moet snel zijn, om tijdverlies en onzekerheid te minimaliseren.}
+Mapbox is geoptimaliseerd voor snelle laadtijden en eenvoudige navigatie. De prestaties van de kaarten zijn geoptimaliseerd om snel te reageren op gebruikersinvoer en real-time data-integratie te ondersteunen, wat cruciaal is voor een efficiënte navigatie-ervaring.
+\subsection*{De informatie die de gebruiker moet onthouden moet beperkt zijn, om het risico op fouten te verlagen.}
+Mapbox stelt gebruikers in staat om kaarten zo te ontwerpen dat ze alleen de essentiële informatie tonen, waardoor cognitieve belasting wordt verminderd en de kans op fouten afneemt. Dit wordt bereikt door de mogelijkheid om lagen en gegevens te filteren en te configureren naar eigen voorkeur.
+\subsection*{De navigatiemethodes moeten gebruiksvriendelijk zijn voor mensen met lees- en onthoudmoeilijkheden.}
+Mapbox maakt het mogelijk om de vormgeving van kaarten en tekst aan te passen om de leesbaarheid te verbeteren voor mensen met dyslexie. Dit kan onder andere door het gebruik van geschikte lettertypen, kleuren en contrasten. Ook met behulp van AI kunnen voorstellen van locaties gedaan worden.
+\subsection*{De navigatiemethode moet kostenefficiënt zijn, zodat onnodige kosten vermeden worden, wat de dienst toegankelijker maakt voor de eindgebruiker en de aanbieder.}
+Dit prijsmodel\footnote{\url{https://www.mapbox.com/pricing}} van Mapbox maakt kostenefficiënte navigatie oplossingen mogelijk, waaronder een gratis versie voor basisgebruik en schaalbare betalingsopties voor geavanceerdere toepassingen. Dit kan gezien worden onder de naam pay-as-you-go wat betekent dat er betaald wordt voor wat er effectief gebruikt wordt. Dit maakt het mogelijk om oplossingen te implementeren die aansluiten bij de behoeften en budgetten van verschillende gebruikers. 
+
+\section{Google Maps}
+\label{sec:google maps}
+
+Het verzamelen van de informatie is gebeurd aan de hand van de Google Maps applicatie en Google Maps documentatie. Met deze informatie is een brede kijk verkregen op de functionaliteiten van Google Maps en een goed beeld gevormd van de applicatie.
+
+\subsection*{Platformonafhankelijkheid}
+Google Maps werkt naadloos op verschillende platformen en apparaten, inclusief desktops, laptops, tablets en smartphones. De gebruikerservaring is consistent en optimaal ongeacht het gebruikte apparaat.
+
+\subsection*{Integratie}
+Google Maps biedt enkele API's (Application Programmable Interface) aan voor een standaard navigatie applicatie. API's onder andere zoals een route API, afstandberekening API, plaats API, statische map API, \ldots . Het platform biedt ook een AR-navigatie API\footnote{\url{https://developers.google.com/ar/develop/geospatial#android-kotlinjava}} aan voor AR navigatie applicaties te ontwikkelen.
+
+\subsection*{Visuele aanwijzingen}
+Google Maps biedt uitgebreide visuele aanwijzingen, waaronder gedetailleerde kaarten, satellietbeelden, street view, live view of AR en 3D-kaarten. Gebruikers kunnen eenvoudig locaties herkennen en routes volgen dankzij de visuele ondersteuning.
+
+\subsection*{Auditieve instructies}
+De applicatie biedt spraakgestuurde navigatie met duidelijke auditieve instructies. Dit is vooral handig tijdens het rijden of wandelen, omdat gebruikers niet naar hun mobielscherm hoeven te kijken om te weten welke richting ze op moeten.
+
+\subsection*{Real-time updates}
+Google Maps biedt real-time updates voor verkeersinformatie, openbaar vervoer, en veranderingen in routes. Dit zorgt ervoor dat gebruikers altijd de meest actuele informatie hebben tijdens hun reis, wat helpt bij het vermijden van vertragingen en files.
+
+\subsection*{Toegankelijkheidsfuncties}
+De applicatie heeft verschillende toegankelijkheidsfuncties, zoals ondersteuning voor screen readers, gesproken aanwijzingen en opties voor aangepaste weergave-instellingen om de leesbaarheid te verbeteren.
+
+\subsection*{Connectiviteit}
+Google Maps vereist internetconnectiviteit voor de meeste functies, zoals het ophalen van kaarten, real-time verkeersinformatie en routebeschrijvingen. Er zijn echter ook offline kaarten beschikbaar die gebruikers kunnen downloaden voor gebruik zonder internetverbinding.
+
+\subsection*{Routebegeleiding}
+Google Maps heeft een AR-functie deze is in de applicatie te vinden onder de naam ``Live View'' voor voetgangersnavigatie. Met behulp van deze functie kan je met een smartphonecamera visuele aanwijzingen krijgen die in de echte wereld te zien zijn. Dit kan het gemakkelijk maken om de weg te vinden in complexe omgevingen of drukke stadscentra.
+
+\subsection*{Visual noise}
+Google Maps minimaliseert visuele ruis door een schone en overzichtelijke kaartweergave te bieden. Gebruikers kunnen ongewenste lagen en informatie uitschakelen om de weergave aan te passen aan hun behoeften.
+
+\subsection*{Speciale hardware}
+De applicatie vereist geen speciale hardware en werkt op standaard apparaten zoals smartphones, tablets en computers. Dit maakt het breed toegankelijk voor verschillende gebruikers.
+
+\subsection*{Offline functionaliteit}
+De applicatie biedt offline functionaliteit door gebruikers toe te staan kaarten van specifieke gebieden te downloaden en op te slaan op hun apparaat. Dit is handig voor het verplaatsen in gebieden met weinig of geen internettoegang.
+
+\subsection*{Veiligheidsfuncties}
+Google Maps zorgt voor de veiligheid van gegevens door gebruik te maken van versleuteling en veilige verbindingen. Bovendien biedt het functies zoals delen van locatie, waarmee gebruikers hun live locatie kunnen delen met vertrouwde contacten tijdens het navigeren of verplaatsen.
+
+\subsection*{Het systeem moet toegankelijk zijn voor alle gebruikers, ongeacht hun specifieke beperkingen.}
+Google Maps biedt gedetailleerde routebeschrijvingen, verkeersinformatie, en zoekfuncties voor nabijgelegen locaties.
+\subsection*{Het ontwerp moet duidelijk en eenvoudig zijn, met minimale complexiteit.}
+De intuïtiviteit van Google Maps is hoog, met een eenvoudige en overzichtelijke interface. Gebruikers kunnen eenvoudig zoeken naar locaties, routes plannen en informatie over verkeersomstandigheden en openbaar vervoer bekijken. De applicatie maakt gebruik van de bekende Google UI/UX patronen. Deze patronen bevatten een bepaalde visuele ontwerptaal voor de gebruikersinterface. Meer specifiek de kleuren, typografie, pictogrammen, \ldots Hiermee is er consistentie in verschillende applicaties. Deze patronen leggen ook de nadruk op de bepaalde zaken die het belangrijkste zijn in die applicatie, de focus ligt erg op bruikbaarheid.
+\subsection*{Het navigatieproces moet snel zijn, om tijdverlies en onzekerheid te minimaliseren.}
+Google Maps is geoptimaliseerd voor snelle en efficiënte navigatie. Het biedt meteen routebeschrijvingen en alternatieve routes om tijdverlies en onzekerheid te minimaliseren. Real-time verkeersinformatie helpt bij het optimaliseren van de tijd die nodig is om zich te verplaatsen.
+\subsection*{De informatie die de gebruiker moet onthouden moet beperkt zijn, om het risico op fouten te verlagen.}
+Google Maps presenteert informatie op een duidelijke en beknopte manier, waardoor de hoeveelheid informatie die de gebruiker moet onthouden wordt geminimaliseerd. Spraakgestuurde aanwijzingen en visuele markeringen helpen gebruikers om gemakkelijk hun weg te vinden zonder veel details te moeten onthouden.
+\subsection*{De navigatiemethodes moeten gebruiksvriendelijk zijn voor mensen met lees- en onthoudmoeilijkheden.}
+Google Maps houdt rekening met toegankelijkheid en biedt verschillende functies om de gebruiksvriendelijkheid voor mensen met dyslexie te verbeteren, zoals duidelijke en beknopte tekstweergave, ondersteuning voor spraakgestuurde zoekopdrachten en aanwijzingen. De applicatie doet ook voorstellen in van locaties die ingevoerd worden.
+\subsection*{De navigatiemethode moet kostenefficiënt zijn, zodat onnodige kosten vermeden worden, wat de dienst toegankelijker maakt voor de eindgebruiker en de aanbieder.}
+Google Maps is gratis te gebruiken, wat het een kostenefficiënte optie maakt voor navigatie. Voor bedrijven en ontwikkelaars biedt Google Maps Platform betaalde plannen.
+
+\section{Samenvatting}
+\label{sec:samenvatting}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|} \hline
+        \textbf{Vereisten} & \textbf{Mapbox} & \textbf{Google Maps} \\ \hline
+        Platformonafhankelijkheid (M1) & X & X \\
+        Integratie (M2) & X & X \\
+        Visuele aanwijzingen (M3) & X & X \\
+        Auditieve instructies (M4) & X & X \\
+        Real-time updates (M5) & X & X \\
+        Toegankelijkheidsfuncties (M6) & X & X \\
+        Connectiviteit (M7) & X & X \\
+        Routebegeleiding (M8) & X & X \\
+        Visual noise (M9) & X & X \\
+        Speciale hardware (M10) & X & X \\
+        Offline functionaliteit (S1) & X & X \\
+        Veiligheidsfuncties (C1) & X & X \\
+        Algemene bruikbaarheid (N1) & X & X \\
+        Intuïtiviteit (N2) & X & X \\
+        Snelheid (N3) & X & X \\
+        Onthoudvermogen (N4) & X & X \\
+        Lees- en onthoudmoeilijkheden (S2) & X & X \\
+        Kosten-efficiëntie (C2) & X & X \\ \hline
+    \end{tabular}
+    \caption{Vereisten voor navigatietools}
+    \label{tab:vereisten voor navigatietools}
+\end{table}
