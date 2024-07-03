@@ -6,15 +6,17 @@
 \label{ch:bepalen-van-de-geschikte-navigatiemethode}
 
 
-Het ontwikkelen van een geavanceerde navigatietool vereist een zorgvuldige afweging van verschillende navigatiemethodes zoals besproken in Sectie~\ref{sec:hedendaagse-navigatiemethodes}. Dit hoofdstuk beschrijft de vereisten die van cruciaal belang zijn voor de keuze tussen deze navigatiemethodes. Deze requirements komen voort uit de literatuurstudie uit Hoofdstuk~\ref{ch:stand-van-zaken}, en werden opgesteld in samenspraak met de copromotor. 
+Het ontwikkelen van een geavanceerde navigatietool vereist een zorgvuldige afweging van verschillende navigatiemethodes zoals besproken in Sectie~\ref{sec:hedendaagse-navigatiemethodes}. Dit hoofdstuk beschrijft de vereisten die van cruciaal belang zijn voor de keuze tussen deze navigatiemethodes. Deze requirements komen voort uit de literatuurstudie uit Hoofdstuk~\ref{ch:stand-van-zaken}, en werden opgesteld in samenspraak met de copromotor.
 
 Een eerste stap in de requirementsanalyse is het prioriteren van de requirements met behulp van de MoSCoW-methode. Door deze systematische aanpak kan een navigatiemethode gekozen worden die niet alleen technisch haalbaar is, maar ook optimaal aansluit bij de behoeften van de gebruikers.
 
 \section{Wat is MoSCoW?}
 
-De MoSCoW-methode is een prioriteringsframework gebruikt in projectbeheer om projectvereisten te categoriseren in vier categorieën: Must have, Should have, Could have, en Won't have~\autocite{Brush2023}. Deze categorieën tonen respectievelijk welke functionaliteiten nodig zijn voor de applicatie, welke minder cruciaal zijn, welke optioneel zijn en welke buiten de scope liggen van de applicatie. Hierdoor ligt de aandacht op de kritieke aspecten van de van de tool.  
+De MoSCoW-methode is een prioriteringsframework gebruikt in projectbeheer om projectvereisten te categoriseren in vier categorieën: Must have, Should have, Could have, en Won't have~\autocite{Brush2023}. Deze categorieën tonen respectievelijk welke functionaliteiten nodig zijn voor de applicatie, welke minder cruciaal zijn, welke optioneel zijn en welke buiten de scope liggen. Hierdoor ligt de aandacht op de kritieke aspecten van de mobiliteitstool.
 
 Deze methode bevordert een efficiënte middelentoewijzing en zorgt ervoor dat essentiële taken prioriteit krijgen~\autocite{Brush2023}. Dit is bijzonder nuttig binnen Agile projectbeheer voor het beheer van de projectomvang en het verbeteren van de productiviteit door duidelijk niet-essentiële elementen die niet worden aangepakt te definiëren.
+
+% TODO: probeer alle requirements te herschrijven als "Het systeem moet..." of iets gelijkaardig.
 
 \section{Functionele requirements}
 \label{sec:functionele-requirements}
@@ -54,6 +56,8 @@ Er zijn geen won't have functionele requirements.
 
 Deze sectie behandelt de niet-functionele requirements. Deze requirements omvatten de kwalitatieve aspecten die essentieel zijn voor het creëren van een gebruiksvriendelijke navigatietool die een aangename ervaring biedt aan de gebruikers uit de specifieke doelgroep van personen met een mentale beperking. We richten ons hier op aspecten zoals de aanpasbaarheid, toegankelijkheid en algemene bruikbaarheid van de navigatiemethode.
 
+% TODO: hier heb je die vetgedrukte woorden niet: ofwel overal toevoegen, ofwel nergens
+
 \subsection*{Must have}
 \begin{itemize}
     \item {Algemene bruikbaarheid}: Het systeem moet toegankelijk zijn voor alle gebruikers, ongeacht hun specifieke beperkingen.
@@ -74,15 +78,14 @@ Deze sectie behandelt de niet-functionele requirements. Deze requirements omvatt
 
 \subsection*{Won't have}
 
-Er zijn geen won't have requirements.
+Er zijn geen won't have requirements.\\
 
-
-Deze requirements worden gebruikt om de juiste navigatiemethode te kiezen.
-
-
+Deze requirements zullen gebruikt worden om de juiste navigatiemethode te kiezen.
 
 %%TODO zelfde bespreking als in POC vandaar kopiëren en in samenvattende tabel. In het begin bespreken wrm De lijn nmbs niet en sygic. + Screenshots
 %%TODO Tabel uit literatuurstudie meenemen
+
+% TODO: deze sectie eerst nog eens nalezen op taal alvorens ik ze lees, heb je hier nog iets aangepast?
 
 \section{Mapbox}
 \label{sec:mapbox}
@@ -93,7 +96,7 @@ Voor het uitvoeren van deze vergelijkende studie is er gebruikt gemaakt van de M
 Mapbox is platformonafhankelijk en kan worden gebruikt in verschillende omgevingen, waaronder mobiele apparaten, desktops en het web. Dit maakt het een veelzijdige oplossing voor diverse toestellen.
 
 \subsection*{Integratie}
-Mapbox biedt verschillende SDK's(Software Development kit) voor het ontwikkelen van een eigen applicatie. SDK's voor Android en iOs. Ze geven uitgebreidde mogelijkheden van kaarten terug, ook ondersteunen ze 3D-terreinweergaven, AR-navigatie en interactieve lagen. Er worden ook een allerlei API's aangeboden zoals statische map API, route API, plaats API, \ldots .
+Mapbox biedt verschillende Software Development Kits (SDK's) voor het ontwikkelen van een eigen applicatie, zoals bijvoorbeeld voor Android en voor iOS. Ze geven uitgebreide mogelijkheden van kaarten terug, ook ondersteunen ze 3D-terreinweergaven, AR-navigatie en interactieve lagen. Er worden ook een allerlei API's aangeboden zoals statische map API, route API, plaats API, \ldots .
 
 \subsection*{Visuele aanwijzingen}
 Mapbox biedt uitgebreide mogelijkheden voor het toevoegen van visuele aanwijzingen, zoals aangepaste markeringen, AR-toepassingen\ldots Dit helpt gebruikers om eenvoudig hun weg te vinden.
@@ -200,6 +203,8 @@ Google Maps is gratis te gebruiken, wat het een kostenefficiënte optie maakt vo
 
 \section{Samenvatting}
 \label{sec:samenvatting}
+
+% TODO: hier gebruik je ineens M1, M2... zonder die uit te leggen. Ik zou die gewoon schrappen, de tabel is niet zo groot dat ze echt nodig zijn.
 
 \begin{table}[ht]
     \centering
