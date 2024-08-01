@@ -18,7 +18,7 @@
 
 %% For source code highlighting, requires pygments to be installed
 %% Compile with the -shell-escape flag!
-\usepackage[section]{minted}
+\usepackage[section,outputdir=./out]{minted}
 \usepackage{biblatex}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -27,7 +27,8 @@
 \usepackage{multirow}
 \usepackage{listings}
 
-\lstset{language=JavaScript}
+% TODO: JavaScript word niet ondersteund (zie https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Supported_languages)
+% \lstset{language=JavaScript}
 
 %% If you compile with the make_thesis.{bat,sh} script, use the following
 %% import instead:
@@ -173,14 +174,14 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 \section*{Samenvatting}
 
 % Kopieer en plak hier de samenvatting (abstract) van je onderzoeksvoorstel.
-Dit onderzoek richt zich op de integratie van Augmented Reality (AR) voor de optimalisatie van interactieve mobiliteitstools ten voordele van mensen met een mentale beperking. 
+Dit onderzoek richt zich op de integratie van Augmented Reality (AR) voor de optimalisatie van interactieve mobiliteitstools ten voordele van personen met een mentale beperking. 
 Mobiliteit is een belangrijk aspect van het dagelijkse leven en vormt een specifieke uitdaging voor mensen met een verstandelijke beperking. 
 Startpunt van het onderzoek zijn reeds bestaande tools die aan de hand van AR tot een volledig Proof-of-Concept (POC) zullen uitgewerkt worden. 
 Dankzij een bevraging van de stakeholders wil het onderzoek bijkomende inzichten creëren zowel omtrent de doelgroep als de concrete oplossingen. 
 Binnen de uitwerking van de POC is gepland om een beperkte groep mensen met de ontworpen app te laten experimenteren. Dit om meteen na te gaan of ze zich beter kunnen verplaatsen met de AR ondersteunde applicatie. 
 Uit de vergelijkende studie wordt verwacht dat specifieke AR functionaliteiten zullen worden geïdentificeerd voor deze doelgroep. 
 Bovendien zal dankzij een testfase van de POC het effectieve gebruiksgemak worden beoordeeld. 
-Als conclusie zal deze studie een duidelijk lastenboek afleveren voor verdere ontwikkeling van een aangepaste mobiliteitstool voor mensen met een mentale beperking.
+Als conclusie zal deze studie een duidelijk lastenboek afleveren voor verdere ontwikkeling van een aangepaste mobiliteitstool voor personen met een mentale beperking.
 % Verwijzing naar het bestand met de inhoud van het onderzoeksvoorstel
 \input{../voorstel/voorstel-inhoud}
 
